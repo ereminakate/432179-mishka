@@ -1,6 +1,6 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Екатерина Попова](https://up.htmlacademy.ru/adaptive/11/user/432179).
+* Студент: [Екатерина Еремина](https://up.htmlacademy.ru/adaptive/11/user/432179).
 * Наставник: [Александр Горбачев](https://htmlacademy.ru/profile/hrbchv).
 
 ---
