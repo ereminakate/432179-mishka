@@ -6,131 +6,115 @@
   </head>
   <body>
 	  <header class="page-header">
-		  <div class="page‐header__logo">
-			  <img src="http://placehold.it/150x100" alt="Мишка">
+		  <div class="logo">
+			  <a href="#"><img class="logo__img" src="http://placehold.it/150x100" alt="Мишка" width="86px" height="35px"></a>
 		  </div>
-		  <div class="main-nav">
+		  <nav class="main-nav">
 			  <span class="main‐nav__toggler">
 			  <div class="main‐nav__wrapper">
 			      <ul class="main‐nav__list">
 			        <li class="main‐nav__item"><a href="">Каталог товаров</a></li>
 			        <li class="main‐nav__item"><a href="">Вязание на заказ</a></li>
+			        <li class="main‐nav__item main‐nav__item--search"><a href="">Поиск по сайту</a></li>
+			        <li class="main‐nav__item main‐nav__item--cart"><a href="">Корзина: пока пуста</a></li>
 			      </ul>
 			  </div>
-		  </div>
+		  </nav>
 	  </header>
-	  <section class="form-block">
-		  <div class="form-block__wrapper">
-			  <div class="form-block__title form-block__title--bg">
-				  <h1>Вязание на заказ</h1>
-			  </div>
-		  
+	  <main class="page-main">
+		  <div class="page-main__title page-main__title--bg">
+			  <h1>Вязание на заказ</h1>
+		  </div>
+		  <section class="form-block">
 			  <p class="form-block__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 			  <form class="form-block__form" action="https://echo.htmlacademy.ru" method="post">
-				  <div class="form-block__wrapper">
-					  <div class="form-block__item form-block__item--type">
-						  <div class="form-block__name-item form-block__name-item--line">
-						  	<p>Тип</p>
-					  	  </div>
-						  <div class="form-item">
-							  <input class="form-item__value form-item__value--radio" type="radio" id="form-item__type-interior" name="type" value="interior" checked>
-							  <label for="form-item__type-interior" class="form-item__label">Аксессуар для интерьера</label>
-						  </div>
-						  <div class="form-item">
-							  <input class="form-item__value form-block__item-value--radio" type="radio" id="form-item__type-toy" name="type" value="toy">
-							  <label for="form-item__type-toy" class="form-item__label">Детская игрушка</label>
-						  </div>
+				  <div class="form-block__item form-block__item--type">
+					  <span class="form-block__name-item">Тип</span>
+					  <div class="form-item">
+						  <input class="form-item__value form-item__value--radio" type="radio" id="form-item__type-interior" name="type" value="interior" checked>
+						  <label for="form-item__type-interior" class="form-item__label">Аксессуар для интерьера</label>
 					  </div>
-					  <div class="form-block__item form-block__item--color">
-						  <div class="form-block__name-item form-block__name-item--line">
-						    <p>Цвет</p>
-					  	  </div>
-					  	  <div class="form-item">
-						  	<input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-white" name="color" value="white" checked>
-						  	<label for="form-item__color-white" class="form-block__item-label">Белый</label>
-						  </div>
-						  <div class="form-item">
-						  	<input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-gray" name="color" value="gray" checked>
-						  	<label for="form-item__color-gray" class="form-block__item-label">Серый</label>
-						  </div> 
-						  <div class="form-item">
-						  	<input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-tiffani" name="color" value="color-tiffani">
-						  	<label for="form-item__color-tiffani" class="form-block__item-label">"Тиффани"</label>
-						  </div>
-						  <div class="form-item">
-						  	<input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-black" name="color" value="black">
-						  	<label for="form-item__color-black" class="form-block__item-label">Черный</label>
-						  </div>
-						  <div class="form-item">
-						  	<input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-pink" name="color" value="pink">
-						  	<label for="form-item__color-pink" class="form-block__item-label">Розовый</label>
-						  </div> 
-						  <div class="form-item">
-						  	<input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-orange" name="color" value="orange">
-						  	<label for="form-item__color-orange" class="form-block__item-label">Оранжевый</label>
-						  </div> 
+					  <div class="form-item">
+						  <input class="form-item__value form-block__item-value--radio" type="radio" id="form-item__type-toy" name="type" value="toy">
+						  <label for="form-item__type-toy" class="form-item__label">Детская игрушка</label>
 					  </div>
-					  <div class="form-block__item form-block__item--fio">
-						  <div class="form-block__name-item form-block__name-item--line">
-						    <p>ФИО</p>
-					  	  </div>
-					  	  <div class="form-item">
-						  	  <label for="form-item__fio-name" class="form-block__item-label">Имя:</label></br>
-						  	  <input class="form-item__value form-item__value--fio" type="text" id="form-item__fio-name" name="name" placeholder="Введите ваше имя*" required> 
-					  	  </div>
-					  	  <div class="form-item">
-						  	  <label for="form-item__fio-familia" class="form-block__item-label">Фамилия:</label></br>
-						  	  <input class="form-item__value form-item__value--fio" type="text" id="form-item__fio-familia" name="familia" placeholder="Укажите фамилию*" required> 
-					  	  </div>
-					  	  <div class="form-item">
-						  	  <label for="form-item__fio-otchestvo" class="form-block__item-label">Отчество:</label></br>
-						  	  <input class="form-item__value form-item__value--fio" type="text" id="form-item__fio-otchestvo" name="otchestvo" placeholder="Отчество, если желаете*"> 
-					  	  </div>
-					  </div>
-					  <div class="form-block__item form-block__item--tel">
-						  <div class="form-block__name-item form-block__name-item--line">
-						    <p>Тел</p>
-					  	  </div>
-					  	  <div class="form-item">
-						  	  <input class="form-item__value form-item__value--tel" type="tel" id="form-item__tel" name="tel" placeholder="+7 XXX XX XX*" pattern="[0-9]{1} [0-9]{3} [0-9]{2} [0-9]{2}" required>
-					  	  </div>
-					  </div>
-					  <div class="form-block__item form-block__item--email">
-						  <div class="form-block__name-item form-block__name-item--line">
-						    <p>E-mail</p>
-					  	  </div>
-					  	  <div class="form-item">
-						  	  <input class="form-item__value form-item__value--email" type="email" id="form-item__email" name="email" placeholder="Ваш Email*" required>
-					  	  </div>
-					  </div>
-					  <div class="form-block__item form-block__item--dop">
-						  <div class="form-block__name-item form-block__name-item--line">
-						    <p>Доп</p>
-					  	  </div>
-					  	  <div class="form-item">
-						  	  <textarea class="form-item__value form-item__value--dop" cols="18" rows="6" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-					  	  </div>
-					  </div>
-					  <p>*Поля обязательны для заполнения</p>
-					  <input class="form-block__order btn" type="submit" value="Отправить заказ">
 				  </div>
+				  <div class="form-block__item form-block__item--color">
+					  <span class="form-block__name-item">Цвет</span>
+				  	  <div class="form-item">
+					  	  <input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-white" name="color" value="white" checked>
+					  	  <label for="form-item__color-white" class="form-block__item-label">Белый</label>
+					  </div>
+					  <div class="form-item">
+						  <input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-gray" name="color" value="gray" checked>
+					  	 <label for="form-item__color-gray" class="form-block__item-label">Серый</label>
+					  </div> 
+					  <div class="form-item">
+					  	<input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-tiffani" name="color" value="color-tiffani">
+					  	<label for="form-item__color-tiffani" class="form-block__item-label">"Тиффани"</label>
+					  </div>
+					  <div class="form-item">
+					  	<input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-black" name="color" value="black">
+					  	<label for="form-item__color-black" class="form-block__item-label">Черный</label>
+					  </div>
+					  <div class="form-item">
+					  	<input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-pink" name="color" value="pink">
+					  	<label for="form-item__color-pink" class="form-block__item-label">Розовый</label>
+					  </div> 
+					  <div class="form-item">
+					  	<input class="form-item__value form-item__value--checkbox" type="checkbox" id="form-item__color-orange" name="color" value="orange">
+					  	<label for="form-item__color-orange" class="form-block__item-label">Оранжевый</label>
+					  </div> 
+				  </div>
+				  <div class="form-block__item form-block__item--fio">
+					  <span class="form-block__name-item">ФИО</span>
+				  	  <div class="form-item">
+					  	  <label for="form-item__fio-name" class="form-block__item-label">Имя:</label>
+					  	  <input class="form-item__value form-item__value--fio" type="text" id="form-item__fio-name" name="name" placeholder="Введите ваше имя*" required> 
+				  	  </div>
+				  	  <div class="form-item">
+					  	  <label for="form-item__fio-familia" class="form-block__item-label">Фамилия:</label>
+					  	  <input class="form-item__value form-item__value--fio" type="text" id="form-item__fio-familia" name="familia" placeholder="Укажите фамилию*" required> 
+				  	  </div>
+				  	  <div class="form-item">
+					  	  <label for="form-item__fio-otchestvo" class="form-block__item-label">Отчество:</label>
+					  	  <input class="form-item__value form-item__value--fio" type="text" id="form-item__fio-otchestvo" name="otchestvo" placeholder="Отчество, если желаете*"> 
+				  	  </div>
+				  </div>
+				  <div class="form-block__item form-block__item--tel">
+					  <span class="form-block__name-item">Тел</span>
+				  	  <div class="form-item">
+					  	  <input class="form-item__value form-item__value--tel" type="tel" id="form-item__tel" name="tel" placeholder="+7 XXX XX XX*" pattern="[0-9]{1} [0-9]{3} [0-9]{2} [0-9]{2}" required>
+				  	  </div>
+				  </div>
+				  <div class="form-block__item form-block__item--email">
+					  <span class="form-block__name-item">E-mail</span>
+				  	  <div class="form-item">
+					  	  <input class="form-item__value form-item__value--email" type="email" id="form-item__email" name="email" placeholder="Ваш Email*" required>
+				  	  </div>
+				  </div>
+				  <div class="form-block__item form-block__item--dop">
+					  <span class="form-block__name-item">Доп</span>
+				  	  <div class="form-item">
+					  	  <textarea class="form-item__value form-item__value--dop" cols="18" rows="6" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+				  	  </div>
+				  </div>
+				  <span class="form-block__note">*Поля обязательны для заполнения<span>
+				  <input class="form-block__order btn" type="submit" value="Отправить заказ">
 			  </form>
-		  </div>
-	  </section>
-	  
+		  </section>
+	  </main>
 	  <footer class="page-footer">
 		  <div class="page‐footer__wrapper">
 			  <div class="page‐footer__social">
-				  <span class="social‐links">
-				  	<a class="social‐link  social‐link‐‐vk" href="">VK</a>
-					<a class="social‐link  social‐link‐‐fb" href="">FB</a>
-					<a class="social‐link  social‐link‐‐in" href="">TW</a>
-				  </span>
+				  <a class="social‐link  social‐link‐‐vk" href="#">VK</a>
+				  <a class="social‐link  social‐link‐‐fb" href="#">FB</a>
+				  <a class="social‐link  social‐link‐‐in" href="#">TW</a>
 			  </div>
 		  </div>
 		  <p class="page‐footer__copyright">
-			  Разработано:
-			  <a class="page‐footer__copyright‐link" href=""><img src="http://placehold.it/150x100"></a>
+			  <span>Разработано:</span>
+			  <a class="page‐footer__copyright‐link" href=""><img src="http://placehold.it/150x100"  width="27px" height="34px"></a>
 		  </p>
 	  </footer>
   </body>
