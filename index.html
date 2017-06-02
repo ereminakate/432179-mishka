@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
   <body>
 	  <header class="page-header">
 		  <div class="logo">
-			  <img class="logo__img" src="http://placehold.it/150x100" alt="Мишка" width="86px" height="35px">
+			  <img class="logo__img" src="/img/logo-mobile.svg" alt="Мишка">
 		  </div>
 		  <nav class="main-nav">
 			  <span class="main‐nav__toggler">
@@ -24,7 +25,7 @@
 	  <main class="page-main">
 		  <section class="top-block">
 			  <div class="top-block__wrapper top-block__wrapper--bg">
-				  <h1>Милые штуки ручной работы для дома</h1>
+				  <h1 class="top-block__title">Милые штуки ручной работы для дома</h1>
 			  </div>
 			  <ul class="top-block__list">
 				  <li class="top-block__item top-block__item--bg1 top-block__item--invert">
@@ -38,10 +39,10 @@
 		  <article class="product-item">
 			  <div class="product-item__wrapper">
 				  <h1 class="product-item__title">Вязаные корзинки</h1>
-				  <h2 class="product-item__descr">Товар недели</h2>
-				  <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+				  <h2 class="product-item__descr-title">Товар недели</h2>
+				  <p class="product-item__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 				  <div class="product-item-spec">
-					  <span class="product-item-spec__name">Цвет:</div>
+					  <span class="product-item-spec__name">Цвет:</span>
 					  <span class="product-item-spec__value">"Тиффани"/серый</span>
 				  </div>
 				  <div class="product-item-spec">
@@ -53,7 +54,7 @@
 					  <span class="product-item-spec__value">15 см</span>
 				  </div>
 				  <div class="product-item__img">
-					  <img src="http://placehold.it/150x100" alt="Картинка товара" width="260px" height="315px">
+					  <img src="/img/triple-set-mobile@1x.jpg" alt="Картинка товара" width="260px" height="315px">
 				  </div>
 				  <span class="product-item__price">Цена: 990 руб.</span>
 				  <button class="product-item__order btn">Заказать</button>
@@ -65,37 +66,37 @@
 				  <ul class="block-about__list">
 					  <li class="block-about__item block-about__item--eco">
 					  	<div class="block-about__img-wrap">
-					  		<img src="http://placehold.it/150x100" alt="Эко" width="50px" height="50px">
+					  		<img src="/img/icon-feature-1.svg" alt="Эко" width="50px" height="50px">
 					  	</div>
 					  	<h2 class="block-about__text">Экологически чистые материалы</h2>
 					  </li>
 					  <li class="block-about__item block-about__item--style">
 					  	<div class="block-about__img-wrap">
-					  		<img src="http://placehold.it/150x100" alt="Стиль" width="50px" height="50px">
+					  		<img src="/img/icon-feature-3.svg" alt="Стиль" width="50px" height="50px">
 					  	</div>
 					  	<h2  class="block-about__text">Скандинавский стиль по российской цене</h2>
 					  </li>
 					  <li class="block-about__item block-about__item--like">
 					  	<div class="block-about__img-wrap">
-					  		<img src="http://placehold.it/150x100" alt="Лайк" width="50px" height="50px">
+					  		<img src="/img/icon-feature-5.svg" alt="Лайк" width="50px" height="50px">
 					  	</div>
 					  	<h2 class="block-about__text">Увеличивает лайки на фотографиях</h2>
 					  </li>
 					  <li class="block-about__item block-about__item--hand">
 					  	<div class="block-about__img-wrap">
-					  		<img src="http://placehold.it/150x100" alt="Вручную" width="50px" height="50px">
+					  		<img src="/img/icon-feature-2.svg" alt="Вручную" width="50px" height="50px">
 					  	</div>
 					  	<h2 class="block-about__text">Связано вручную с любовью и умилением</h2>
 					  </li>
 					  <li class="block-about__item block-about__item--support">
 					  	<div class="block-about__img-wrap">
-					  		<img src="http://placehold.it/150x100" alt="Поддержка Отечества" width="50px" height="50px">
+					  		<img src="/img/icon-feature-4.svg" alt="Поддержка Отечества" width="50px" height="50px">
 					  	</div>
 					  	<h2 class="block-about__text">Поддержка отечественного производителя</h2>
 					  </li>
 					  <li class="block-about__item block-about__item--pack">
 					  	<div class="block-about__img-wrap">
-					  		<img src="http://placehold.it/150x100" alt="Подарочная упаковка" width="50px" height="50px">
+					  		<img src="/img/icon-feature-6.svg" alt="Подарочная упаковка" width="50px" height="50px">
 					  	</div>
 					  	<h2 class="block-about__text">Поставляется в подарочной упаковке</h2>
 					  </li>
@@ -111,15 +112,13 @@
 							  <blockquote class="reviews__item  slider__item">
 							  <p>Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 							  <cite class="reviews__auhor‐name">Анастасия Красильникова</cite>
-							  <div class="reviews__auhor‐email">
-								  @mississskras
-							  </div> 
+							  <span class="reviews__auhor‐email">@mississskras</span> 
 						  </div>
 					  </div>
 					  <button class="reviews__prev" type="button"></button>
 					  <button class="reviews__next" type="button"></button>
 				  </div>
-				  <button class="reviews__write" type="button">Написать</button>
+				  <button class="reviews__write btn" type="button">Написать</button>
 			  </div>
 		  </section>
 		  <section class="contacts">
@@ -135,9 +134,9 @@
 				  </li>
 			  </ul>
 			  <div class="contacts__img-map">
-				  <img src="http://placehold.it/150x100" alt="Карта" width="320px" height="457px">
+				  <img src="/img/map-mobile@1x.jpg" alt="Карта" width="320px" height="457px">
 			  </div>
-			  <button class="contacts_write" type="button">Напишите нам</button>
+			  <button class="contacts_write btn" type="button">Напишите нам</button>
 		  </section>
 	  </main>
 	  <footer class="page-footer">
@@ -149,8 +148,8 @@
 			  </div>
 		  </div>
 		  <p class="page‐footer__copyright">
-			  <span>Разработано:</span>
-			  <a class="page‐footer__copyright‐link" href=""><img src="http://placehold.it/150x100" width="27px" height="34px"></a>
+			  <span class="page‐footer__copyright-text">Разработано:</span>
+			  <a class="page‐footer__copyright‐link" href=""><img src="/img/htmlacademy.svg" width="27px" height="34px"></a>
 		  </p>
 	  </footer>
   </body>
