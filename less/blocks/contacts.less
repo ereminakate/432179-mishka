@@ -1,27 +1,46 @@
 .contacts {
-	.container();
+	padding-top: 40px;
 }
 
 .contacts__list {
 	padding: 0px;
 	margin: 0px;
+	padding-top: 40px;
 	list-style: none;
 }
-
+	
 .contacts__item {
 	margin-bottom: 40px;
+	&:after {
+		.clearfix();
+	}
 }
 
 .contacts__name {
-	padding-right: 30px;
+	padding-right: 10px;
+	float: left;
+	display: inline-block;
+	width: 20%;
 	float: left;
 }
 
+
 .contacts__img-map {
-	margin-left: -30px;
 	margin-bottom: 40px;
 }
 
 .contacts_write {
 	margin-bottom: 40px;
+}
+
+.contacts__value {
+	display: inline-block;
+	width: 70%;
+	float: left;
+	text-align: center;
+	
+	&--underline {
+	border-bottom: 1px solid @color-blue;
+	}
+	
 }

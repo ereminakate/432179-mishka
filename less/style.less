@@ -3,8 +3,6 @@
     src: url("/fonts/OpenSans.woff") format("woff"), url("/fonts/OpenSans.woff2") format("woff");
 }
 
-
-
 body {
 	max-width: 320px;
 	margin: 0px;
@@ -12,10 +10,16 @@ body {
 	color: @color-black;
 }
 
+p {
+	padding: 0px;
+	margin: 0px;
+}
+
 @import "variables.less";
 @import "mixins.less";
 
 @import "/blocks/page-header.less";
+@import "/blocks/container-block.less";
 @import "/blocks/logo.less";
 @import "/blocks/main-nav.less";
 @import "/blocks/page-main.less";
@@ -30,3 +34,4 @@ body {
 @import "/blocks/btn.less";
 @import "/blocks/form-block.less";
 @import "/blocks/form-item.less";
+@import "/blocks/social‐link.less";

@@ -1,0 +1,75 @@
+.form-item__value {
+	display: none;
+}
+	
+.form-item__label {
+	position: relative;
+	display: block;
+	margin-bottom: 25px;
+	margin-top: 15px;
+	margin-left: 60px;
+	vertical-align: middle;
+	color: @color-black;
+	.text-size(17px; 18px);
+	
+	&::before {
+	position: absolute;
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 24px;
+	top: -5px;
+	vertical-align: middle;
+	border: 9px solid white;
+	background-color: white;
+	left: -58px;
+	box-shadow: 0 0 0 2px @color-gray-black;
+	}
+	
+	&--radio::before {
+		border-radius: 50%;
+	}
+}
+
+.form-item__value--radio:checked + label::before {
+	background: @color-blue;
+}
+
+.form-item__value--checkbox:checked + label::before {
+		content: "\2713";
+	}
+
+.form-item__value:disabled + label[for*="radio"]::before {
+	box-shadow: 0 0 0 3px #ecf0f1;
+}
+
+.form-item__value:disabled + label {
+	color: #ecf0f1;
+}
+
+.form-item__value:required {
+	border-color: #e74c3c;
+}
+
+.form-item__label-text {
+	.text-size(17px; 18px);
+	display: block;	
+}
+
+input[type="text"],input[type="tel"],input[type="email"] {
+	.text-size(17px; 18px);
+	padding: 15px 0px;
+	margin-bottom: 25px;
+	border: none;
+	border-bottom: 2px solid @color-black;
+	
+}
+
+textarea[class*="form-item__value-text--dop"] {
+	.text-size(17px; 18px);
+	padding: 15px;
+	margin-bottom: 25px;
+	border: 2px solid @color-black;	
+}
+	

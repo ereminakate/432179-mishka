@@ -1,9 +1,48 @@
 .social‐link {
-	&‐‐vk {
-		background-color: @color-blue;
-		background-image: "/img/icon-insta.svg";
+	
+		display: inline-block;
+		position: relative;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		padding-right: 30px;
+	
+	&‐‐in::before {
+		position: absolute;
+		background: url("/img/icon-insta.svg") no-repeat 0% 0%;
+		content: "";
+		left: 0px;
+		top: 0px;
+		width: 25px;
+		height: 25px;
+		z-index: 1;
 	}
-	&:link {
+	
+	
+	&‐‐fb::before {
+		position: absolute;
+		background: url("/img/icon-fb.svg") no-repeat 0% 0%;
+		content: "";
+		left: 0px;
+		top: 0px;
+		width: 15px;
+		height: 25px;
+		z-index: 1;
+		
+	}
+	
+	&‐‐tw::before {
+		position: absolute;
+		background: url("/img/icon-twitter.svg") no-repeat 0% 0%;
+		content: "";
+		left: 0px;
+		top: 0px;
+		width: 25px;
+		height: 25px;
+		z-index: 1;
+	}
+	visited {
 		color: blue;
+		text-decoration: none;
 	}	
 }
