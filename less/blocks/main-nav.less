@@ -1,0 +1,38 @@
+.main-nav {
+	display: none;
+}
+
+.main-nav.show {
+	display: block;
+	position: relative;
+}
+
+.main‐nav__list.show {
+	position: absolute;
+	top: 0px;
+	z-index: 1;
+	background-color: @color-white;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+.main‐nav__item.show {
+	background-color: @color-white;
+	border-bottom: 1px solid @color-light-gray;
+	
+	&:first-child {
+		border-top: 1px solid @color-border-gray;
+	}
+}
+
+.main‐nav__link.show {
+	color: @color-black;
+	text-decoration: none;
+	.text-size(17px; 24px);
+	font-weight: bold;
+	display: block;
+	margin: 0px;
+	padding: 25px 30px 25px 75px;
+}
