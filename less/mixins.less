@@ -3,8 +3,35 @@
 	line-height: @line-height;
 }
 
+.text-size-title() {
+	
+	.text-size(25px; 30px);
+	
+	@media @tablet-widths {
+		
+		.text-size(43px; 50px);
+	}
+	
+	@media @desktop-widths {
+	    .text-size(53px; 57px);
+	}
+}
+
 .container() {
-	padding: 0px 30px;
+
+  width: 260px;
+  padding: 0px 30px;
+
+  @media @tablet-widths {
+    width: 668px;
+    padding: 0px 50px;
+  }
+
+  @media @desktop-widths {
+    width: 1050px;
+    padding: 0px 100px;
+  }
+
 }
 
 .clearfix() {

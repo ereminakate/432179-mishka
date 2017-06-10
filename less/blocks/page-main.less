@@ -7,7 +7,7 @@
 	width: 320px;
 	box-sizing: border-box;
 	&--bg {
-		background-color: @color-gray;
+		background-color: @color-light-gray;
 	}
 }
 
@@ -19,4 +19,42 @@
 	margin: 0px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.page-main__promo-text {
+	display: none;
+	.text-size(15px; 24px);
+}
+
+@media @tablet-widths { 
+	.page-main__title-block {
+		height: 220px;
+		width: 768px;
+		position: relative;
+		
+	}	
+	.page-main__title {
+		padding-top: 100px;
+		.text-size-title();
+	}
+	
+	.page-main__promo-text {
+		display: block;
+		position: absolute;
+		top: 25px;
+		right: 50px;
+		color: @color-gray-black;
+	}
+}
+
+@media @desktop-widths { 
+	.page-main__title-block {
+		height: 254px;
+		width: 1250px;
+	}	
+	
+	.page-main__promo-text {
+		right: 100px;
+	}
+	
 }

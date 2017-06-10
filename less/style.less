@@ -5,15 +5,31 @@
 
 body {
 	max-width: 320px;
-	margin: 0px;
+	
+	margin: 0 auto;
 	font-family: OpenSans;
 	color: @color-black;
+
+	@media @tablet-widths {
+		max-width: 768px;
+	}
+	
+	@media @desktop-widths {
+		max-width: 1250px;
+	}
+}
+
+main {
+	padding: 0px;
+	margin: 0px;
 }
 
 p {
 	padding: 0px;
 	margin: 0px;
 }
+
+
 
 @import "variables.less";
 @import "mixins.less";
@@ -35,3 +51,4 @@ p {
 @import "/blocks/form-block.less";
 @import "/blocks/form-item.less";
 @import "/blocks/social‐link.less";
+@import "/blocks/add-nav.less";

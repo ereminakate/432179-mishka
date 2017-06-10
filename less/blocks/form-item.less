@@ -57,13 +57,14 @@
 	display: block;	
 }
 
-input[type="text"],input[type="tel"],input[type="email"] {
+.form-item__value-text {
+	&--fio, &--tel, &--email {
 	.text-size(17px; 18px);
 	padding: 15px 0px;
 	margin-bottom: 25px;
 	border: none;
 	border-bottom: 2px solid @color-black;
-	
+	}
 }
 
 textarea[class*="form-item__value-text--dop"] {
@@ -71,5 +72,71 @@ textarea[class*="form-item__value-text--dop"] {
 	padding: 15px;
 	margin-bottom: 25px;
 	border: 2px solid @color-black;	
+}
+
+@media @tablet-widths {
+	
+	
+	.form-item__values {
+		width: 70%;
+		display: flex;
+		flex-wrap: wrap;
+		
+		&--fio {
+			flex-direction: column;
+		}
+	}
+	
+	.form-item {
+		&--colors {
+			width: 50%;
+		}
+		&--fio {
+			display: flex;
+			justify-content: flex-start;
+			align-items: baseline;
+		}
+		&--tel, &--email {
+			width: 100%;
+		}
+		&--dop {
+			width: 70%;
+		}
+	}
+	
+	.form-item__value-text {
+		margin-left: 20px;
+		flex-grow: 2;
+		
+		&--tel, &--email, &--dop {
+			width: 100%;
+			margin-left: 0px;
+			background-color: @color-light-gray;
+		}
+		
+		&--dop {
+			background: none;
+		}
+	}
+}
+
+@media @desktop-widths {
+	
+	.form-item__values {
+		&--type {
+			flex-direction: column;
+		}
+	}
+	
+	.form-item__label {
+		font-size: 19px;
+		font-weight: bold;
+	}
+	
+	.form-item {
+		&--colors {
+			width: 30%;
+		}
+	}
 }
 	

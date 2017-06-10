@@ -1,3 +1,51 @@
 .page-header {
 	background-color: @color-white;
+	min-height: 80px;
+	width: 320px;
+}
+
+.page-header__container {
+	.container();
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.page-header__menu-button {
+	background-color: @color-white;
+    width: 40px;
+    height: 14px;
+    margin: auto;
+}
+
+
+.page-header__button {
+	background-color: white;
+	border: none;
+}
+
+.page-header__button--open {
+    display: none;
+}
+
+@media @tablet-widths {
+
+  .page-header {
+    height: 88px; /* минимальная высота содержания */
+    width: 768px;
+  }
+  .page-header__menu-button {
+	display: none;
+	}
+
+}
+
+
+@media @desktop-widths {
+
+  .page-header {
+	  width: 1244px;
+  }
+
+
 }

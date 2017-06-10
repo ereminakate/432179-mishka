@@ -1,24 +1,27 @@
 .main-nav {
-	display: none;
+	display: none;	
 }
 
 .main-nav.show {
 	display: block;
 	position: relative;
+	width: 320px;
+	background-color: @color-white;
+	
 }
 
-.main‐nav__list.show {
+.main‐nav__list {
+	list-style: none;
 	position: absolute;
 	top: 0px;
-	z-index: 1;
-	background-color: @color-white;
-	list-style: none;
+	left: -30px;
 	padding: 0px;
 	margin: 0px;
-	width: 100%;
+	z-index: 1;
+	width: 320px;
 }
 
-.main‐nav__item.show {
+.main‐nav__item {
 	background-color: @color-white;
 	border-bottom: 1px solid @color-light-gray;
 	
@@ -27,7 +30,7 @@
 	}
 }
 
-.main‐nav__link.show {
+.main‐nav__link {
 	color: @color-black;
 	text-decoration: none;
 	.text-size(17px; 24px);
@@ -35,4 +38,217 @@
 	display: block;
 	margin: 0px;
 	padding: 25px 30px 25px 75px;
+	box-sizing: border-box;
+}
+
+.main‐nav__item--new, .main‐nav__item--sale {
+	display: none;
+}
+
+@media @tablet-widths {
+
+  .main-nav {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: auto;
+	}
+
+	.main‐nav__list {
+		display: flex;
+		width: auto;
+		justify-content: center;
+		flex-wrap: wrap;
+		position: relative;
+		justify-content: space-between;
+	}
+	
+	.main‐nav__item {
+		height: 88px;
+		padding: 0px;
+		width: 50%;
+		border-left: 1px solid @color-border-gray;
+	}
+		
+	.main‐nav__link {
+		padding: 30px 25px;
+	}
+	
+	.main‐nav__item--search {
+		order: -2;
+		position: relative;
+		width: 80px;
+		
+		&:before {
+			position: absolute;
+			display: block;
+			content: "";
+			width: 20px;
+			height: 20px;
+			background: url("img/icon-search.svg") no-repeat;
+			top: 30px;
+			left: 30px;
+			
+		}
+	}
+	
+	.main‐nav__item--cart {
+		order: -1;
+		flex-grow: 1;
+	}
+	
+	.main‐nav__link--cart {
+		padding-left: 80px;
+		padding-right: 0px;
+		position: relative;
+		&:before {
+			position: absolute;
+			display: block;
+			content: "";
+			width: 20px;
+			height: 20px;
+			background: url("img/icon-cart.svg") no-repeat;
+			top: 30px;
+			left: 30px;
+		}
+	}
+
+	.main‐nav__link--search {
+		display: none;
+	}
+	
+	.main‐nav__item--catalog {
+		position: absolute;
+		top: 88px;
+		left: -300px;
+		background: none;
+		border: none;
+	}
+	.main‐nav__item--knitting {
+		position: absolute;
+		top: 88px;
+		left: -137px;
+		width: 167px;
+		background: none;
+		border: none;
+	}
+	
+	.main‐nav__link--catalog, .main‐nav__link--knitting {
+		padding: 25px 0px;
+		.text-size(15px; 20px);
+	}
+}
+
+
+@media @desktop-widths {
+	
+	.main‐nav__item {
+		height: 88px;
+		padding: 0px;
+		width: 50%;
+		border-left: 1px solid @color-border-gray;
+	}
+		
+	.main‐nav__link {
+		padding: 30px 25px;
+	}
+	
+	.main‐nav__item--search {
+		order: -2;
+		position: relative;
+		width: 80px;
+		
+		&:before {
+			position: absolute;
+			display: block;
+			content: "";
+			width: 20px;
+			height: 20px;
+			background: url("img/icon-search.svg") no-repeat;
+			top: 30px;
+			left: 30px;
+			
+		}
+	}
+	
+	.main‐nav__item--cart {
+		order: -1;
+		flex-grow: 1;
+	}
+	
+	.main‐nav__link--cart {
+		padding-left: 80px;
+		padding-right: 0px;
+		position: relative;
+		&:before {
+			position: absolute;
+			display: block;
+			content: "";
+			width: 20px;
+			height: 20px;
+			background: url("img/icon-cart.svg") no-repeat;
+			top: 30px;
+			left: 30px;
+		}
+	}
+
+	.main‐nav__link--search {
+		display: none;
+	}
+	
+	.main‐nav__item--catalog {
+		position: absolute;
+		top: 0px;
+		left: -700px;
+		width: 183px;
+		background: none;
+		border: none;
+		border-right: 1px solid @color-border-gray;
+		
+	}
+	.main‐nav__item--knitting {
+		position: absolute;
+		top: 0px;
+		left: -517px;
+		width: 183px;
+		background: none;
+		border: none;
+		border-right: 1px solid @color-border-gray;
+		padding-left: 38px;
+	}
+	
+	.main‐nav__link--catalog, .main‐nav__link--knitting {
+		padding: 25px 0px;
+		.text-size(15px; 20px);
+	}
+	
+	.main‐nav__item--new {
+		display: block;
+		position: absolute;
+		top: 88px;
+		left: -700px;
+		width: 183px;
+		background: none;
+		border: none;
+	}
+	.main‐nav__item--sale {
+		display: block;
+		position: absolute;
+		top: 88px;
+		left: -517px;
+		width: 183px;
+		background: none;
+		border: none;
+	}
+	
+	.main‐nav__link--new {
+		.text-size(15px; 24px);
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.main‐nav__link--sale {
+		.text-size(15px; 24px);
+	}
+
 }

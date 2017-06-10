@@ -1,5 +1,5 @@
-.top-block__wrapper{
-	.container();
+.top-block__wrapper {
+	box-sizing: border-box;
 	height: 284px;
 	padding-top: 75px;
 	margin-top: 0px;
@@ -14,8 +14,7 @@
 	padding: 0px;
 	margin: 0px;
 	padding-top: 35px;
-	font-size: 27px;
-	line-height: 30px;
+	.text-size(27px; 30px);
 }
 
 .top-block__list {
@@ -37,11 +36,101 @@
 
 .top-block__item-interior, .top-block__item-toys {
 		display: block;
-		width: 30%;
+		position: relative;
+		text-align: center;
+		box-sizing: border-box;
 		margin: 0px;
 		padding: 30px 30px;
+		padding-right: 167px;
 		text-decoration: none;
-		font-size: 19px;
-		line-height: 24px;	
+		.text-size(19px; 24px);	
 		color: @color-white;
+}
+
+.top-block__item-interior:after {
+		display: block;
+		position: absolute;
+		right: 30px;
+		top: 30px;
+		content: "";
+		text-align: center;
+		box-sizing: border-box;
+		margin: 0px;
+		padding: 30px 30px;
+		background: url("img/icon-interior.svg") no-repeat 0% 0%;
+}
+
+.top-block__item-toys:after {
+		display: block;
+		position: absolute;
+		right: 30px;
+		top: 30px;
+		content: "";
+		text-align: center;
+		box-sizing: border-box;
+		margin: 0px;
+		padding: 30px 30px;
+		background: url("img/icon-toy.svg") no-repeat 0% 0%;
+}
+
+@media @tablet-widths {
+	
+	
+	.top-block__title {
+		padding: 70px;
+		.text-size-title();
+	}
+
+
+  .top-block__wrapper {
+	    height: 750px; /* минимальная высота содержания */
+		width: 768px;
+		margin: 0 auto;
+		padding-top: 160px;
+		
+		&--bg {
+			background: @color-gray url("img/hero-tablet@1x.jpg") no-repeat 50% 20%;
+		}
+  }
+  
+  .top-block {
+	  position: relative;
+  }
+  
+  .top-block__list {
+	display: flex;
+	position: absolute;
+	bottom: 0px;
+	justify-content: center;
+	left: 30px;
+	right: 30px;
+	box-sizing: border-box;
+	}
+	
+	.top-block__item {
+		width: 334px;
+	}
+	
+	.top-block__item-interior, .top-block__item-toys {
+		.text-size(20px; 30px);	
+	}
+}
+
+@media @desktop-widths {
+	.top-block__wrapper {
+	    height: 746px; /* минимальная высота содержания */
+		width: 1250px;
+		margin: 0 auto;
+		padding-top: 160px;
+		padding-left: 150px;
+		padding-right: 150px;
+		
+		&--bg {
+			background: @color-gray url("img/hero-desktop@1x.jpg") no-repeat 50% 20%;
+		}
+  	}
+  	
+  	.top-block__item {
+		width: 525px;
+	}
 }
