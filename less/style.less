@@ -1,41 +1,4 @@
-@font-face {
-    font-family: OpenSans;
-    src: url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: OpenSansBold;
-    src: url("../fonts/opensansbold.woff") format("woff"), url("../fonts/opensansbold.woff2") format("woff2");
-} 
-
-body {
-	max-width: 320px;
-	
-	margin: 0 auto;
-	font-family: OpenSans;
-	color: @color-black;
-
-	@media @tablet-widths {
-		max-width: 768px;
-	}
-	
-	@media @desktop-widths {
-		max-width: 1250px;
-	}
-}
-
-main {
-	padding: 0px;
-	margin: 0px;
-}
-
-p {
-	padding: 0px;
-	margin: 0px;
-}
-
-
-
+@import "scaffolding.less";
 @import "variables.less";
 @import "mixins.less";
 
