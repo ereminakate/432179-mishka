@@ -1,6 +1,10 @@
 @font-face {
   font-family: OpenSans;
-  src: url("../fonts/OpenSans.woff") format("woff"), url("../fonts/OpenSans.woff2") format("woff");
+  src: url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
+}
+@font-face {
+  font-family: OpenSansBold;
+  src: url("../fonts/opensansbold.woff") format("woff"), url("../fonts/opensansbold.woff2") format("woff2");
 }
 body {
   max-width: 320px;
@@ -121,7 +125,7 @@ p {
     content: "";
     top: 20px;
     left: 0px;
-    background: url("../img/logo-tablet.psd") no-repeat;
+    background: url("../img/logo-tablet.png") no-repeat;
     width: 113px;
     height: 46px;
   }
@@ -130,7 +134,7 @@ p {
   .logo:after {
     left: 445px;
     top: 10px;
-    background: url("../img/logo-desktop.psd") no-repeat;
+    background: url("../img/logo-desktop.jpg") no-repeat;
     width: 149px;
     height: 72px;
   }
@@ -1156,7 +1160,7 @@ p {
     right: 430px;
   }
   .contacts__img-map {
-    background: url("../img/map.psd") no-repeat;
+    background: url("../img/map.jpg") no-repeat;
   }
 }
 .page-footer {
@@ -1213,7 +1217,7 @@ p {
     position: absolute;
     display: block;
     content: "";
-    background: url("../img/logo-footer.psd") no-repeat;
+    background: url("../img/logo-footer.jpg") no-repeat;
     width: 102px;
     height: 34px;
     top: 30px;
@@ -1455,7 +1459,7 @@ p {
   height: 1px;
   top: 0px;
   left: 60px;
-  background: url("../img/line-green.psd") no-repeat 0% 0%;
+  background: url("../img/line-green.jpg") no-repeat 0% 0%;
 }
 .form-block__name-item {
   color: #63d1bb;
