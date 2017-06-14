@@ -8,27 +8,27 @@
   <body>
 	  <header class="page-header">
 		  <div class="page-header__container">
+			  <h1 class="visually-hidden">Магазин рукоделия "Мишка"</h1>
 			  <div class="logo">
 				  <img class="logo__img" src="img/logo-mobile.svg" alt="Мишка">
 			  </div>
-			  <div class="page-header__menu-button">
-				  <button class="page-header__button">
-				  	  <img src="img/icon-menu-open.svg" alt="Меню">
-	              </button>
-	              <button class="page-header__button page-header__button--open">
-	                  <img src="img/icon-menu-close.svg" alt="Х">
-	              </button>
-	          </div>
-			  <nav class="main-nav">
-				  <ul class="main‐nav__list">
-					  <li class="main‐nav__item main‐nav__item--catalog"><a class="main‐nav__link main‐nav__link--catalog" href="#">Каталог товаров</a></li>
-				      <li class="main‐nav__item main‐nav__item--knitting"><a class="main‐nav__link main‐nav__link--knitting" href="#">Вязание на заказ</a></li>
-				      <li class="main‐nav__item main‐nav__item--search"><a class="main‐nav__link main‐nav__link--search" href="#">Поиск по сайту</a></li>
-				      <li class="main‐nav__item main‐nav__item--cart"><a class="main‐nav__link main‐nav__link--cart" href="#">Корзина: пока пуста</a></li>
-				      
-				      <li class="main‐nav__item main‐nav__item--new"><a class="main‐nav__link main‐nav__link--new" href="#">Новые поступления</a></li>
-				      <li class="main‐nav__item main‐nav__item--sale"><a class="main‐nav__link main‐nav__link--sale" href="#">Распродажа</a></li>
-				  </ul>
+			  
+			  <nav class="main-nav main-nav--closed main-nav--nojs">
+				  <button class="main-nav__toggle page-header__button">Открыть меню</button>
+				  <div class="main-nav__wrapper">
+					  <ul class="main‐nav__list1">
+						  <li class="main‐nav__item main‐nav__item--catalog"><a class="main‐nav__link main‐nav__link--catalog" href="#">Каталог товаров</a></li>
+					      <li class="main‐nav__item main‐nav__item--knitting"><a class="main‐nav__link main‐nav__link--knitting" href="#">Вязание на заказ</a></li>
+					  </ul>
+					  <ul class="main‐nav__list2">  
+					      <li class="main‐nav__item main‐nav__item--search"><a class="main‐nav__link main‐nav__link--search" href="#">Поиск по сайту</a></li>
+					      <li class="main‐nav__item main‐nav__item--cart"><a class="main‐nav__link main‐nav__link--cart" href="#">Корзина: пока пуста</a></li>
+					  </ul>
+					  <ul class="main‐nav__list3"> 
+					      <li class="main‐nav__item main‐nav__item--new"><a class="main‐nav__link main‐nav__link--new" href="#">Новые поступления</a></li>
+					      <li class="main‐nav__item main‐nav__item--sale"><a class="main‐nav__link main‐nav__link--sale" href="#">Распродажа</a></li>
+					  </ul>
+				  </div>
 			  </nav>
 		  </div>
 	  </header>
@@ -154,5 +154,21 @@
 		  </p>
 		  </div>
 	  </footer>
+	  <script>
+	    var navMain = document.querySelector('.main-nav');
+	    var navToggle = document.querySelector('.main-nav__toggle');
+	
+	    navMain.classList.remove('main-nav--nojs');
+	
+	    navToggle.addEventListener('click', function() {
+	      if (navMain.classList.contains('main-nav--closed')) {
+	        navMain.classList.remove('main-nav--closed');
+	        navMain.classList.add('main-nav--opened');
+	      } else {
+	        navMain.classList.add('main-nav--closed');
+	        navMain.classList.remove('main-nav--opened');
+	      }
+	    });
+	  </script>
   </body>
 </html>
