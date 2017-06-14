@@ -32,7 +32,7 @@
 	cursor: pointer;
 }
 
-.main‐nav__list {
+.main‐nav__list1, .main‐nav__list2, .main‐nav__list3 {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
@@ -79,7 +79,7 @@
 	    display: block;
 	  }
 	  
-	  .main-nav--opened .main‐nav__list {
+	  .main-nav--opened .main‐nav__list1 {
 	
 			position: absolute;
 			top: 0px;
@@ -90,13 +90,30 @@
 			width: 320px;
 		}
 		
-		.main-nav--closed .main‐nav__list {
+		.main-nav--opened .main‐nav__list2 {
+	
+			position: absolute;
+			top: 148px;
+			left: 0px;
+			padding: 0px;
+			margin: 0px;
+			z-index: 1;
+			width: 320px;
+		}
+		
+		.main-nav--closed .main‐nav__list1, .main-nav--closed .main‐nav__list2 {
 			display: none;
 		}
 }
 	
 @media @tablet-widths {
 	
+	.main-nav__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: auto;
+	}
 
   .main-nav {
 	display: flex;
@@ -109,14 +126,23 @@
 	    display: none;
 	  }
 
-	.main‐nav__list {
+	.main‐nav__list1, .main‐nav__list2, .main‐nav__list3  {
 		display: flex;
 		width: auto;
-		justify-content: center;
 		flex-wrap: wrap;
-		position: relative;
-		justify-content: space-between;
 	}
+	
+	.main‐nav__list1 {
+		order: 2;
+		width: 100%;
+		justify-content: flex-start;
+	}
+	
+	.main‐nav__list2 {
+		margin-left: auto;
+		width: 348px;
+	}
+
 	
 	.main‐nav__item {
 		height: 88px;
@@ -144,7 +170,7 @@
 	}
 	
 	.main‐nav__link--cart {
-		padding-left: 80px;
+		padding-left: 75px;
 		padding-right: 0px;
 		position: relative;
 		&:before {
@@ -163,23 +189,13 @@
 		font-size: 0px;
 	}
 	
-	.main‐nav__item--catalog {
-		position: absolute;
-		top: 88px;
-		left: -300px;
+	.main‐nav__item--catalog, .main‐nav__item--knitting {
+		width: 25%;
 		background: none;
 		border: none;
 		z-index: 2;
 	}
-	.main‐nav__item--knitting {
-		position: absolute;
-		top: 88px;
-		left: -137px;
-		width: 167px;
-		background: none;
-		border: none;
-		z-index: 2;
-	}
+	
 	
 	.main‐nav__link--catalog, .main‐nav__link--knitting {
 		padding: 25px 0px;
@@ -197,11 +213,6 @@
 		border-left: 1px solid @color-border-gray;
 	}
 		
-	.main‐nav__link {
-		padding: 30px 25px;
-	}
-	
-		
 	.main‐nav__item--cart {
 		order: -1;
 		flex-grow: 1;
@@ -211,22 +222,12 @@
 		width: 80px;
 	}
 	
-	.main‐nav__link--cart {
-		padding-left: 80px;
-		padding-right: 0px;
-		position: relative;
-		&:before {
-			position: absolute;
-			display: block;
-			content: "";
-			width: 20px;
-			height: 20px;
-			background: url("../img/icon-cart.svg") no-repeat;
-			top: 30px;
-			left: 30px;
-		}
-	}
+	
 
+	.main‐nav__list2 {
+		margin-left: auto;
+		width: 100%;
+	}
 	
 	
 	.main‐nav__item--catalog {
