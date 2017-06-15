@@ -1,5 +1,10 @@
 .form-block {
-	margin-top: 30px;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+.form-block__container {
+	.container();	
 }
 
 .form-block__descr {
@@ -7,7 +12,7 @@
 }
 
 .form-block__form {
-	margin-top: 30px;
+	padding-top: 30px;
 }
 
 .form-block__item {
@@ -19,7 +24,7 @@
 		height: 1px;
 		top: 0px;
 		left: 60px;
-		background: url("img/line-green.psd") no-repeat 0% 0%;
+		background: url("../img/line-green.jpg") no-repeat 0% 0%;
 	}
 }
 
@@ -38,6 +43,87 @@
 }
 
 .form-block__order {
-	margin-top: 35px;
-	margin-bottom: 55px;
+	padding-top: 35px;
+	padding-bottom: 55px;
+}
+
+
+@media @tablet-widths {
+	.form-block {
+		padding-top: 80px;
+	}
+	
+	.form-block__bg {
+		background-color: @color-light-gray;
+	}
+	
+	.form-block__container {
+		position: relative;
+	}
+
+	
+	.form-block__descr {
+		.text-size(17px; 30px);
+	}
+	
+	.form-block__item {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 50px;
+		
+		&--tel {
+			padding-bottom: 0px;
+		}
+	}
+	
+	.form-block__name-item {
+		width: 20%;
+	}
+	
+	.form-block__order {
+		width: 230px;
+		padding-top: 0px;
+	}
+	
+	.form-block__note {
+		position: absolute;
+		bottom: 30px;
+		right: 0px;
+		width: 250px;
+		height: 20px;
+		display: block;
+	}	
+	
+	.form-block__form {
+		position: relative;
+	}
+}
+
+@media @desktop-widths {
+	.form-block {
+		padding-top: 130px;
+	}
+	
+	.form-block__descr {
+		padding: 0px 175px;
+	}
+	
+	.form-block__container {
+		 box-sizing: border-box;
+	}
+	
+	.form-block__name-item {
+		width: 175px;
+		padding-left: 60px;
+		box-sizing: border-box;
+
+	}
+	
+	.form-block__note {
+		right: 175px;
+	}
+	
+	.form-block__order {
+		margin-left: 175px;
+	}
 }

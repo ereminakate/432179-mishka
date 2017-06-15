@@ -1,13 +1,13 @@
 .product-item {
 	color: @color-gray-black;
-	margin-bottom: 30px;
+	padding-bottom: 30px;
 }
 
 .product-item__title {
 	padding: 0px;
 	margin: 0px;
 	padding-top: 35px;
-	.text-size(25px; 30px);
+	.text-size-title();
 	color: @color-black;
 }
 
@@ -29,8 +29,7 @@
 }
 
 .product-item-spec {
-	
-	padding: 15px 0px;
+	padding: 0px;
 	&:after {
 		.clearfix();
 	}
@@ -56,6 +55,7 @@
 
 .product-item__img {
 	padding-top: 30px;
+	text-align: center;
 }
 
 .product-item__price {
@@ -65,4 +65,112 @@
 }
 
 .product-item__order {
+}
+
+@media @tablet-widths {
+	
+	.product-item {
+		padding-bottom: 50px;
+	}
+
+	.product-item__titles {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.product-item__title {
+		.text-size-title();
+		padding: 0px;
+	}
+	
+	.product-item__descr {
+		padding-bottom: 55px;
+	}
+	
+	.product-item__descr-title {
+		padding: 0px;
+		.text-size(17px; 17px);
+		width: 100px;
+		text-align: center;
+	}
+	
+	.product-item__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	
+	.product-item__block-descr {
+		width: 50%;
+	}
+
+	.product-item__block-order {
+		width: 50%;
+	}
+	
+	.product-item__block-order {
+		order: 1;
+	}
+}
+
+@media @desktop-widths {
+	
+	.product-item {
+		padding-bottom: 380px;
+		padding-top: 130px;
+		margin: 0px;
+	}
+	
+	.product-item__container {
+		position: relative;
+	}
+		
+	.product-item__img img {
+		display: none;
+	}
+	
+	.product-item__img {
+		position: relative;
+		
+		&:after {
+			position: absolute;
+			content: "";
+			display: block;
+			width: 525px;
+			height: 636px;
+			background: url("../img/triple-set-desktop@1x.jpg") no-repeat;
+			top: -50px;
+			left: -520px;
+		}
+	}
+		
+	.product-item__titles {
+		justify-content: flex-start;
+	}
+		
+	.product-item__title {
+		z-index: 1;
+	}
+	
+	.product-item__descr-title-wrap {
+		order: -1;
+		width: 175px;
+		text-align: center;
+	}
+	
+	.product-item__block-descr {
+		width: 30%;
+		padding-left: 175px;
+	}
+	
+	.product-item__block-order {
+		order: 1;
+		position: absolute;
+		bottom: -340px;
+		left: 170px;
+		width: 30%;
+		height: 200px;
+	}
+	
 }

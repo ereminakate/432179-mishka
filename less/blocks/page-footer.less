@@ -29,3 +29,41 @@
 .page‐footer__copyright‐link {
 	vertical-align: middle;
 }
+
+@media @tablet-widths {
+	.page‐footer__wrapper {
+		display: flex;
+	}
+	.page‐footer__social {
+		position: relative;
+		width: 100%;
+		padding-left: 250px;
+		
+		&:before {
+			position: absolute;
+			display: block;
+			content: "";
+			background: url("../img/logo-footer.jpg") no-repeat;
+			width: 102px;
+			height: 34px;
+			top: 30px;
+			left: 50px;
+		}
+	}
+	.page‐footer__copyright {	
+		width: 50%;
+	}
+}
+
+@media @desktop-widths {
+	
+	.page-footer {
+		clear: both;
+	}
+	
+	.page‐footer__social {
+		&:before {
+			left: 100px;
+		}
+	}
+}
