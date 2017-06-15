@@ -1,31 +1,39 @@
 .page-header {
 	background-color: @color-white;
 	min-height: 80px;
-	width: 320px;
 }
 
 .page-header__container {
-	.container();
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
 
+.page-header__promo-text {
+	display: none;
+	.text-size(15px; 24px);
+}
 
 @media @tablet-widths {
 
   .page-header {
 		height: 88px; /* минимальная высота содержания */
-		width: 768px;
   }
+  
+  .page-header__promo-text {
+		display: block;
+		position: absolute;
+		top: 125px;
+		right: 50px;
+		color: @color-gray-black;
+		z-index: 3;
+	}
 }
 
 
 @media @desktop-widths {
-
-  .page-header {
-	  width: 1244px;
-  }
-
-
+	.page-header__promo-text {
+		right: 100px;
+	}
 }

@@ -19,14 +19,15 @@
 					  <ul class="main‐nav__list1">
 						  <li class="main‐nav__item main‐nav__item--catalog"><a class="main‐nav__link main‐nav__link--catalog" href="#">Каталог товаров</a></li>
 					      <li class="main‐nav__item main‐nav__item--knitting"><a class="main‐nav__link main‐nav__link--knitting" href="#">Вязание на заказ</a></li>
+					      <li class="main‐nav__item main‐nav__item--new"><a class="main‐nav__link main‐nav__link--new" href="#">Новые поступления</a></li>
+					      <li class="main‐nav__item main‐nav__item--sale"><a class="main‐nav__link main‐nav__link--sale" href="#">Распродажа</a></li>
 					  </ul>
 					  <ul class="main‐nav__list2">  
 					      <li class="main‐nav__item main‐nav__item--search"><a class="main‐nav__link main‐nav__link--search" href="#">Поиск по сайту</a></li>
 					      <li class="main‐nav__item main‐nav__item--cart"><a class="main‐nav__link main‐nav__link--cart" href="#">Корзина: пока пуста</a></li>
-					  </ul>
-					  <ul class="main‐nav__list3"> 
-					      <li class="main‐nav__item main‐nav__item--new"><a class="main‐nav__link main‐nav__link--new" href="#">Новые поступления</a></li>
-					      <li class="main‐nav__item main‐nav__item--sale"><a class="main‐nav__link main‐nav__link--sale" href="#">Распродажа</a></li>
+					      <li class="main‐nav__item main‐nav__item--promo-text">
+					      	  <span class="main‐nav__promo-text">Бесплатная доставка по России</span>
+					      </li>
 					  </ul>
 				  </div>
 			  </nav>
@@ -34,9 +35,10 @@
 	  </header>
 	  <main class="page-main">
 		  <section class="top-block">
-			  <div class="top-block__wrapper top-block__wrapper--bg">
-				  <span class="page-main__promo-text">Бесплатная доставка по России</span>
-				  <h1 class="top-block__title">Милые штуки ручной работы для дома</h1>
+			  <div class="top-block__wrapper-bg">
+				  <div class="top-block__wrapper">
+					  <h1 class="top-block__title">Милые штуки ручной работы для дома</h1>
+				  </div>
 			  </div>
 			  <ul class="top-block__list">
 				  <li class="top-block__item top-block__item--bg1 top-block__item--invert">
@@ -147,22 +149,28 @@
 		  </section>
 		  <section class="contacts">
 			  <div class="contacts__container-block">
-				  <h2 class="contacts__title">Контакты</h2>
-				  <ul class="contacts__list">
-					  <li class="contacts__item">
-						  <span class="contacts__name">email:</span>
-						  <span class="contacts__value contacts__value--underline">inf0@mimimishka.ru</span>
-					  </li>
-					  <li class="contacts__item">
-						  <span class="contacts__name">адрес:</span>
-						  <span class="contacts__value">Г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
-					  </li>
-				  </ul>
+				  <div class="contacts__wrap">
+					  <h2 class="contacts__title">Контакты</h2>
+					  <ul class="contacts__list">
+						  <li class="contacts__item">
+							  <span class="contacts__name">email:</span>
+							  <div class="contacts__value-wrap">
+								  <span class="contacts__value contacts__value--underline">inf0@mimimishka.ru</span>
+							  </div>
+						  </li>
+						  <li class="contacts__item">
+							  <span class="contacts__name">адрес:</span>
+							  <div class="contacts__value-wrap">
+								  <span class="contacts__value">Г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
+							  </div>
+						  </li>
+					  </ul>
+			      </div>
 			  </div>
 			  <div class="contacts__img-map">
 				  <img src="img/map-mobile@1x.jpg" alt="Карта">
 			  </div>
-			  <div class="contacts__container-block contacts__container-block--btn">
+			  <div class="contacts__container-btn">
 				  <button class="contacts_write btn" type="button">Напишите нам</button>
 			  </div>
 		  </section>

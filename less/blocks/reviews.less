@@ -52,14 +52,14 @@
 
 @media @tablet-widths {
 	.reviews {
-		padding-top: 80px;
-		background: url("../img/review@1x.jpg") no-repeat;	
+		background: url("../img/review@1x.jpg") no-repeat;
 	}
 	
 	.reviews__wrapper {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		
 	}
 	
 	.reviews__item-text {
@@ -106,14 +106,20 @@
 
 @media @desktop-widths {
 	
+	.reviews {
+		background: none;
+	}
+
+	
 	.reviews__title {
 		.text-size-title();
 	} 
 	
 	.reviews__wrapper {
-		width: 1250px;
+		width: 1050px;
 		box-sizing: border-box;
-		padding: 0px 275px;
+		padding: 0px 175px;
+		background: url("../img/review@1x.jpg") no-repeat;
 			
 	}
 	

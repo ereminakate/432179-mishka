@@ -11,34 +11,23 @@
 }
 
 @media @tablet-widths {
-	.logo__img {
-		display: none;
-	}
 	.logo {
-		position: relative;
-		&:after {
-			display: block;
-			position: absolute;
-			content: "";
-			top: 20px;
-			left: 0px;
-			background: url("../img/logo-tablet.png") no-repeat;
-			width: 113px;
-			height: 46px;
-			z-index: 2;
-		}
+		position: absolute;
+		height: 35px;
+		width: 86px;
+		left: 50px;
+		top: 0px;
+		z-index: 3;
 	}
 }
 
 @media @desktop-widths {
-
 	.logo {
-		&:after {
-			left: 480px;
-			top: 10px;
-			background: url("../img/logo-desktop.jpg") no-repeat;
-			width: 149px;
-			height: 72px;
-		}
+		position: absolute;
+		height: 35px;
+		width: 86px;
+		left: 700px;
+		top: 0px;
+		z-index: 3;
 	}
 }

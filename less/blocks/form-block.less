@@ -1,5 +1,6 @@
 .form-block {
-	margin-top: 30px;
+	padding-top: 30px;
+	padding-bottom: 50px;
 }
 
 .form-block__container {
@@ -11,7 +12,7 @@
 }
 
 .form-block__form {
-	margin-top: 30px;
+	padding-top: 30px;
 }
 
 .form-block__item {
@@ -42,19 +43,24 @@
 }
 
 .form-block__order {
-	margin-top: 35px;
-	margin-bottom: 55px;
+	padding-top: 35px;
+	padding-bottom: 55px;
 }
 
 
 @media @tablet-widths {
 	.form-block {
-		margin-top: 80px;
+		padding-top: 80px;
 	}
 	
 	.form-block__bg {
 		background-color: @color-light-gray;
 	}
+	
+	.form-block__container {
+		position: relative;
+	}
+
 	
 	.form-block__descr {
 		.text-size(17px; 30px);
@@ -63,25 +69,25 @@
 	.form-block__item {
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: 50px;
+		padding-bottom: 50px;
 		
 		&--tel {
-			margin-bottom: 0px;
+			padding-bottom: 0px;
 		}
 	}
 	
 	.form-block__name-item {
-		width: 25%;
+		width: 20%;
 	}
 	
 	.form-block__order {
 		width: 230px;
-		margin-top: 0px;
+		padding-top: 0px;
 	}
 	
 	.form-block__note {
 		position: absolute;
-		bottom: 65px;
+		bottom: 30px;
 		right: 0px;
 		width: 250px;
 		height: 20px;
@@ -95,7 +101,7 @@
 
 @media @desktop-widths {
 	.form-block {
-		margin-top: 130px;
+		padding-top: 130px;
 	}
 	
 	.form-block__descr {
@@ -103,8 +109,6 @@
 	}
 	
 	.form-block__container {
-		 width: 1250px;
-		 padding: 0px 50px;
 		 box-sizing: border-box;
 	}
 	
