@@ -1,3 +1,7 @@
+.block-about {
+	padding-top: 30px;
+}
+
 .block-about__wrapper {
 	.container();
 	color: @color-black;
@@ -35,12 +39,18 @@
 @media @tablet-widths {
 	
 	.block-about {
-		padding-top: 50px;
-		padding-bottom: 70px;
+		padding-top: 60px;
+		padding-bottom: 35px;
 	}
 	
 	.block-about__text {
 	.text-size(20px; 22px);
+	padding-top: 15px;
+	padding-bottom: 45px;
+	}
+	
+	.block-about__title {
+		padding-bottom: 20px;
 	}
 	
 	.block-about__list {
@@ -71,6 +81,11 @@
 }
 
 @media @desktop-widths {
+	
+	.block-about {
+		padding-top: 80px;
+		padding-bottom: 45px;
+	}
 
 	.block-about__wrapper {
 		width: 1250px;
@@ -80,6 +95,10 @@
 	.block-about__list {
 		justify-content: space-between;
 		width: 668px;
+	}
+	
+	.block-about__img-wrap {
+		padding-top: 10px;
 	}
 	
 }

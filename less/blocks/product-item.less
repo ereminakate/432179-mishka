@@ -1,20 +1,24 @@
 .product-item {
 	color: @color-gray-black;
-	padding-bottom: 30px;
+	padding: 30px 0px;
 }
 
 .product-item__title {
 	padding: 0px;
 	margin: 0px;
-	padding-top: 35px;
+	padding-bottom: 15px;
 	.text-size-title();
+	font-weight: bold;
 	color: @color-black;
 }
 
+.product-item__titles {
+	padding-bottom: 30px;
+}
+	
 .product-item__descr-title {
 	padding: 0px;
 	margin: 0px;
-	padding-top: 15px;
 	.text-size(17px; 20px);
 	color: @color-blue;
 	text-transform: uppercase;
@@ -23,8 +27,7 @@
 .product-item__descr {
 	padding: 0px;
 	margin: 0px;
-	padding-top: 30px;
-	padding-bottom: 35px;
+	padding-bottom: 20px;
 	.text-size(15px; 24px);
 }
 
@@ -54,29 +57,40 @@
 
 
 .product-item__img {
-	padding-top: 30px;
+	padding-top: 28px;
+	padding-bottom: 30px;
 	text-align: center;
 }
 
 .product-item__price {
 	display: block;
 	text-align: center;
-	padding: 30px 0px;
+	padding: 0px;
+	padding-bottom: 28px;
 }
 
 .product-item__order {
+	color: @color-gray-black;
+	font-weight: bold;
 }
 
 @media @tablet-widths {
 	
 	.product-item {
 		padding-bottom: 50px;
+		padding-top: 55px;
 	}
 
 	.product-item__titles {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding-bottom: 60px;
+	}
+	
+	.product-item__img {
+		padding: 0px;
+		float: right;
 	}
 	
 	.product-item__title {
@@ -85,46 +99,60 @@
 	}
 	
 	.product-item__descr {
-		padding-bottom: 55px;
+		padding-bottom: 40px;
+		.text-size(17px; 30px);
 	}
 	
 	.product-item__descr-title {
 		padding: 0px;
 		.text-size(17px; 17px);
+		font-weight: bold;
 		width: 100px;
 		text-align: center;
 	}
 	
+	.product-item-spec {
+		.text-size(15px; 20px);
+	}
+	
 	.product-item__container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		
 	}
 	
 	.product-item__block-descr {
-		width: 50%;
+		width: 290px;
+		float: left;
+		padding-bottom: 60px;
 	}
 
 	.product-item__block-order {
-		width: 50%;
+		width: 290px;
+		clear: left;
 	}
 	
-	.product-item__block-order {
-		order: 1;
+	.product-item__price {
+		padding-bottom: 35px;
+		color: @color-gray-black;
+		.text-size(20px; 24px);
+		font-weight: bold;
 	}
 }
 
 @media @desktop-widths {
 	
 	.product-item {
-		padding-bottom: 380px;
-		padding-top: 130px;
+		padding-bottom: 270px;
+		padding-top: 125px;
 		margin: 0px;
 	}
 	
 	.product-item__container {
 		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
+	
 		
 	.product-item__img img {
 		display: none;
@@ -140,13 +168,14 @@
 			width: 525px;
 			height: 636px;
 			background: url("../img/triple-set-desktop@1x.jpg") no-repeat;
-			top: -50px;
+			top: -150px;
 			left: -520px;
 		}
 	}
 		
 	.product-item__titles {
 		justify-content: flex-start;
+		padding-bottom: 50px;
 	}
 		
 	.product-item__title {
@@ -156,21 +185,30 @@
 	.product-item__descr-title-wrap {
 		order: -1;
 		width: 175px;
-		text-align: center;
+		display: flex;
+		justify-content: center;
 	}
 	
 	.product-item__block-descr {
-		width: 30%;
+		width: 294px;
 		padding-left: 175px;
+	}
+	
+	.product-item__descr {
+		padding-bottom: 35px;
 	}
 	
 	.product-item__block-order {
 		order: 1;
 		position: absolute;
-		bottom: -340px;
+		bottom: -265px;
 		left: 170px;
 		width: 30%;
 		height: 200px;
+	}
+	
+	.product-item-spec__name, .product-item-spec__value {
+		padding: 10px 0px;
 	}
 	
 }
