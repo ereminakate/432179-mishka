@@ -1,11 +1,31 @@
 .form-item {
-	padding: 10px 0px;
+	padding: 0px;
 	display: flex;
 	width: 100%;
+	padding-bottom: 15px;
 	
 	&--fio {
-		flex-direction: column;
+		flex-direction: column; 
+		padding-bottom: 25px;
 	}
+	
+	&--fio:last-child {
+		padding-bottom: 0px;
+	}
+	
+	&--colors:not(:last-child) {
+		padding-bottom: 30px;
+	}
+	
+	&--tel {
+		padding-top: 0px;
+		padding-bottom: 30px;
+	}
+	
+	&--email:last-child {
+		padding-bottom: 0px;
+	}
+		
 }
 
 .form-item__value {
@@ -16,17 +36,22 @@
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	
+	&--fio {
+		padding-top: 5px;
+	}
 }
 	
 .form-item__label {
 	width: 100%;
 	position: relative;
 	display: block;
-	margin-bottom: 25px;
-	margin-top: 15px;
+	margin-bottom: 0px;
+	margin-top: 10px;
 	margin-left: 60px;
 	color: @color-black;
 	.text-size(17px; 18px);
+	font-weight: bold;
 	
 	&::before {
 	position: absolute;
@@ -71,6 +96,7 @@
 .form-item__label-text {
 	.text-size(17px; 18px);
 	display: block;	
+	font-weight: bold;
 }
 
 .form-item__value-text {
@@ -78,7 +104,7 @@
 		width: 100%;
 		.text-size(17px; 18px);
 		padding: 15px 0px;
-		padding-bottom: 25px;
+		padding-bottom: 15px;
 		border: none;
 		border-bottom: 2px solid @color-black;
 	}
@@ -88,7 +114,7 @@ textarea[class*="form-item__value-text--dop"] {
 	width: 100%;
 	.text-size(17px; 18px);
 	padding: 15px;
-	margin-bottom: 25px;
+	margin-bottom: 0px;
 	border: 2px solid @color-black;	
 }
 
@@ -96,16 +122,24 @@ textarea[class*="form-item__value-text--dop"] {
 	
 	
 	.form-item__values {
-		width: 80%;
+		width: 70%;
 		display: flex;
 		flex-wrap: wrap;
 		
 	}
 	
 	.form-item {
+		
+		padding-bottom: 40px;
+		
 		&--colors {
 			width: 50%;
 		}
+		
+		&--colors:not(:last-child) {
+			padding-bottom: 40px;
+		}
+		
 		&--fio {
 			display: flex;
 			justify-content: flex-start;
@@ -114,14 +148,16 @@ textarea[class*="form-item__value-text--dop"] {
 		}
 		&--tel, &--email {
 			width: 100%;
+			padding-bottom: 20px;
 		}
+		
 		&--dop {
-			width: 80%;
+			width: 70%;
 		}
 	}
 	
 	.form-item__value-text {
-		margin-left: 20px;
+		margin-left: 24px;
 		flex-grow: 2;
 		
 		&--tel, &--email, &--dop {
@@ -133,6 +169,19 @@ textarea[class*="form-item__value-text--dop"] {
 		&--dop {
 			background: none;
 		}
+	}
+	
+	.form-item__label {
+		margin-left: 90px;
+		padding-top: 10px;
+		padding-left: 10px;
+		
+		&::before {
+			width: 21px;
+			height: 21px;
+			border: 15px solid white;
+			left: -88px;
+			}
 	}
 }
 
@@ -150,6 +199,12 @@ textarea[class*="form-item__value-text--dop"] {
 	.form-item__label {
 		font-size: 19px;
 		font-weight: bold;
+		 padding-left: 0px;
+		 margin-left: 80px;
+		 
+		 &:before {
+			 left: -78px;
+		 }
 	}
 	
 	.form-item {
@@ -160,6 +215,7 @@ textarea[class*="form-item__value-text--dop"] {
 		
 		&--fio {
 			flex-direction: row;
+			padding-bottom: 20px;
 		}
 	}
 }
