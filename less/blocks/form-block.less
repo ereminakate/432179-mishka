@@ -1,14 +1,16 @@
 .form-block {
-	padding-top: 30px;
-	padding-bottom: 50px;
+	padding-top: 22px;
+	padding-bottom: 28px;
 }
 
 .form-block__container {
 	.container();	
+	padding-bottom: 28px;
 }
 
 .form-block__descr {
 	.text-size(13px; 24px);
+	color: #444444;
 }
 
 .form-block__form {
@@ -26,6 +28,10 @@
 		left: 60px;
 		background: url("../img/line-green.jpg") no-repeat 0% 0%;
 	}
+	
+	&--tel .form-block__name-item, &--email .form-block__name-item {
+		padding-bottom: 0px;
+	}
 }
 
 .form-block__name-item {
@@ -33,24 +39,26 @@
 	display: block;
 	text-transform: uppercase;
 	font-weight: bold;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 }
 
 .form-block__note {
 	.text-size(14px; 16px);
 	color: @color-gray-black;
+	display: block;
+	padding-bottom: 35px;
 }
 
 .form-block__order {
-	padding-top: 35px;
-	padding-bottom: 55px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 
 @media @tablet-widths {
 	.form-block {
 		padding-top: 80px;
+		padding-bottom: 50px;
 	}
 	
 	.form-block__bg {
@@ -59,6 +67,7 @@
 	
 	.form-block__container {
 		position: relative;
+		padding-bottom: 0px;
 	}
 
 	
@@ -69,29 +78,46 @@
 	.form-block__item {
 		display: flex;
 		flex-wrap: wrap;
-		padding-bottom: 50px;
+		padding-bottom: 30px;
+		padding-top: 50px;
 		
 		&--tel {
 			padding-bottom: 0px;
 		}
+		&--fio {
+			align-items: baseline;
+			padding-top: 40px;
+			padding-bottom: 50px;
+		}
+		&--email {
+			padding-top: 0px;
+			padding-bottom: 50px;
+		}
+		
+		&--dop {
+			padding-bottom: 10px;
+		}
 	}
 	
 	.form-block__name-item {
-		width: 20%;
+		width: 165px;
+		padding-top: 10px;
 	}
 	
 	.form-block__order {
 		width: 230px;
-		padding-top: 0px;
+		padding-top: 10px;
 	}
 	
 	.form-block__note {
 		position: absolute;
-		bottom: 30px;
+		bottom: 0px;
 		right: 0px;
 		width: 250px;
 		height: 20px;
 		display: block;
+		padding-top: 20px;
+		box-sizing: border-box;
 	}	
 	
 	.form-block__form {
@@ -102,6 +128,10 @@
 @media @desktop-widths {
 	.form-block {
 		padding-top: 130px;
+	}
+	
+	.form-block__form {
+		padding-top: 0px;
 	}
 	
 	.form-block__descr {

@@ -38,6 +38,7 @@
 	}
 
 .main‐nav__item {
+	height: 80px;
 	background-color: @color-white;
 	border-bottom: 1px solid @color-light-gray;
 	
@@ -65,6 +66,18 @@
 
 
 @media @mobile-widths-only {
+	
+	
+	.main-nav--closed .main‐nav__list1, .main-nav--closed .main‐nav__list2 {
+	    display: none;
+	
+	  }
+	  
+	  .main-nav--nojs .main‐nav__list1, .main-nav--nojs .main‐nav__list2 {
+	    display: block;
+	
+	  }
+  
 	.main-nav--nojs .main-nav__toggle {
 	    display: none;
 	  }
@@ -90,12 +103,26 @@
 		}
 		
 		.main-nav--opened .main‐nav__list2 {
-			top: 148px;
+			top: 162px;
 		}
 		
-		.main-nav--closed .main‐nav__list1, .main-nav--closed .main‐nav__list2 {
-			display: none;
-		}
+	.main‐nav__link--search, .main‐nav__link--cart {
+		position: relative;
+	}
+	&--search:before, &--cart:before, {
+		position: absolute;
+		width: 22px;
+		height: 22px;
+		content: "";
+		background: url("../img/icon-search.svg") no-repeat 50% 50%;
+		top: 28px;
+		left: 30px;
+	}
+	
+	&--cart:before {
+		background: url("../img/icon-cart.svg") no-repeat 50% 50%;
+	}
+		
 		
 }
 	
@@ -163,7 +190,7 @@
 	}
 	
 	.main‐nav__link--cart {
-		padding-left: 75px;
+		padding-left: 80px;
 		padding-right: 0px;
 		position: relative;
 		&:before {
@@ -191,8 +218,8 @@
 	
 	
 	.main‐nav__link--catalog, .main‐nav__link--knitting {
-		padding: 25px 0px;
-		.text-size(15px; 20px);
+		padding: 20px 0px;
+		.text-size(15px; 24px);
 	}
 	
 	.main‐nav__item--promo-text {
@@ -204,8 +231,10 @@
 	}
 	
 	.main‐nav__promo-text {
-		padding-top: 30px;
+		padding-top: 24px;
 		display: block;
+		.text-size(15px; 24px);
+		text-align: right;
 	}
 }
 
@@ -230,6 +259,7 @@
 		order: -1;
 		width: 700px;
 		justify-content: flex-start;
+		margin-top: 0px;
 	}
 	.main‐nav__list2 {
 		justify-content: flex-end;
@@ -249,11 +279,6 @@
 		width: 350px;
 	}
 	
-	.main‐nav__link--catalog, .main‐nav__link--knitting {
-		padding: 25px 0px;
-		.text-size(15px; 20px);
-	}
-	
 	.main‐nav__item--new {
 		display: block;
 		background: none;
@@ -270,6 +295,11 @@
 		width: 210px;
 	}
 	
+	.main‐nav__link--catalog, .main‐nav__link--knitting {
+		padding: 32px 0px;
+		.text-size(17px; 24px);
+	}
+	
 	.main‐nav__link--knitting {
 		padding-left: 38px;
 	}
@@ -278,16 +308,19 @@
 		.text-size(15px; 24px);
 		padding-left: 0px;
 		padding-right: 0px;
+		padding-top: 20px;
 	}
 	
 	.main‐nav__link--sale {
 		.text-size(15px; 24px);
 		padding-left: 38px;
+		padding-top: 20px;
 	}
 	
 	.main‐nav__item--promo-text {
 		border: none;
 		text-align: right;
+		padding-top: 20px;
 	}
 
 }

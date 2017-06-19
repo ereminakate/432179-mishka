@@ -6,6 +6,7 @@
 .text-size-title() {
 	
 	.text-size(25px; 30px);
+	font-weight: bold;
 	
 	@media @tablet-widths {
 		
@@ -19,7 +20,7 @@
 
 .container() {
 
-  width: 320px;
+  width: 260px;
   margin: 0 auto;
 
   @media @tablet-widths {
@@ -33,7 +34,10 @@
 }
 
 .clearfix() {
-	content: "";
-	display: table;
-	clear: both;
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
 }

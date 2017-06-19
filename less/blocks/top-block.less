@@ -13,8 +13,9 @@
 .top-block__title {
 	padding: 0px;
 	margin: 0 auto;
-	width: 250px;
+	width: 81%;
 	.text-size(27px; 30px);
+	font-weight: bold;
 }
 
 .top-block__list {
@@ -24,6 +25,7 @@
 }
 
 .top-block__item {
+	font-weight: bold;
 
 	&--bg1 {
 		background: @color-blue;
@@ -49,7 +51,7 @@
 			display: block;
 			position: absolute;
 			right: 30px;
-			top: 10px;
+			top: 20px;
 			content: "";
 			text-align: center;
 			box-sizing: border-box;
@@ -62,6 +64,11 @@
 
 }
 
+.top-block__item-interior span, .top-block__item-toys span{
+	width: 130px;
+	display: block;
+}
+	
 .top-block__item-toys:after {
 		background: url("../img/icon-toy.svg") no-repeat 50% 50%;
 }
@@ -76,14 +83,15 @@
 	.top-block__title {
 		.text-size-title();
 		width: 510px;
+		padding-top: 164px;
 	}
 
 
   .top-block__wrapper {
 	    height: 750px; /* минимальная высота содержания */
 		width: 768px;
-		margin: 0 auto;
-		
+		margin: 0 auto;	
+		align-items: flex-start;
   }
   
   .top-block {
@@ -127,6 +135,6 @@
 	}
 	
 	.top-block__title {
-		width: 510px;
+		width: 630px;
 	}
 }
