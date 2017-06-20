@@ -7,9 +7,11 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
+	  <!-- .................................________PAGE-HEADER________............................. -->
 	  <header class="page-header">
 		  <div class="page-header__container">
 			  <h1 class="visually-hidden">Магазин рукоделия "Мишка"</h1>
+			  <!-- .................................________LOGO________............................. -->
 			  <div class="logo">
 				  <a href="index.html">
 					  <picture>
@@ -19,7 +21,7 @@
 					  </picture>
 				  </a>
 			  </div>
-			  
+			  <!-- .................................________MAIN-NAV________............................. -->
 			  <nav class="main-nav main-nav--closed main-nav--nojs">
 				  <button class="main-nav__toggle page-header__button">Открыть меню</button>
 				  <div class="main-nav__wrapper">
@@ -46,6 +48,7 @@
 				  <h1 class="page-main__title">Вязание на заказ</h1>
 			  </div>
 		  </div>
+		  <!-- .................................________FORM________............................. -->
 		  <section class="form-block">
 			  <div class="form-block__container">
 				  <p class="form-block__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
@@ -154,6 +157,7 @@
 			  </form>
 		  </section>
 	  </main>
+	  <!-- .................................________FOOTER________............................. -->
 	  <footer class="page-footer">
 		  <div class="page‐footer__wrapper">
 			  <div class="page‐footer__logo">
@@ -173,6 +177,11 @@
 	  <script>
 	    var navMain = document.querySelector('.main-nav');
 	    var navToggle = document.querySelector('.main-nav__toggle');
+	    
+	    var modalOpen = document.querySelector('.js-modal-open');
+		var modalSize = document.querySelector('.modal-size');
+		var modalClose = document.querySelector('.js-modal-close');
+		
 	
 	    navMain.classList.remove('main-nav--nojs');
 	
@@ -185,6 +194,27 @@
 	        navMain.classList.remove('main-nav--opened');
 	      }
 	    });
+	    
+		
+		modalOpen.addEventListener("click", function(evt) {
+		  evt.preventDefault();
+		  modalSize.classList.add("modal-size__show");
+		});
+		
+		modalClose.addEventListener("click", function(evt) {
+		  evt.preventDefault();
+		  modalSize.classList.remove("modal-size__show");
+		});
+		
+		window.addEventListener("keydown", function(evt) {
+		  if (evt.keyCode === 27) {
+		    if (modalSize.classList.contains("modal-size__show")) {
+		      modalSize.classList.remove("modal-size__show");
+		    }
+		  }
+		});
+
 	  </script>
+
   </body>
 </html>
