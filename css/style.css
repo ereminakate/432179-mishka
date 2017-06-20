@@ -41,6 +41,7 @@ img {
   border-bottom: 1px solid #ececec;
 }
 .page-header__container {
+  position: relative;
   width: 100%;
   display: -ms-flexbox;
   display: flex;
@@ -87,6 +88,12 @@ img {
     width: 1050px;
   }
 }
+.container-block--form-padding {
+  padding-bottom: 28px;
+}
+.container-block--position-relative {
+  position: relative;
+}
 .logo {
   height: 80px;
   -ms-flex-positive: 1;
@@ -103,7 +110,7 @@ img {
     position: absolute;
     height: 35px;
     width: 86px;
-    left: 50px;
+    left: 0px;
     top: 30px;
     z-index: 3;
   }
@@ -239,8 +246,8 @@ img {
   .main-nav__wrapper {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
@@ -266,10 +273,10 @@ img {
   .main‐nav__list1 {
     -ms-flex-order: -1;
         order: -1;
-    width: 320px;
     -ms-flex-pack: start;
         justify-content: flex-start;
     margin-top: auto;
+    width: 47%;
   }
   .main‐nav__list2 {
     width: 350px;
@@ -363,7 +370,7 @@ img {
   .main‐nav__list1 {
     -ms-flex-order: -1;
         order: -1;
-    width: 700px;
+    width: 66%;
     -ms-flex-pack: start;
         justify-content: flex-start;
     margin-top: 0px;
@@ -483,11 +490,11 @@ img {
     right: 100px;
   }
 }
-.top-block__wrapper-bg {
-  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat 50% 20%;
+.top-block--wrapper-bg {
+  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat 50% 0%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .top-block__wrapper-bg {
+  .top-block--wrapper-bg {
     background-image: url("../img/hero-mobile@2x.jpg");
     background-size: 575px auto;
   }
@@ -504,7 +511,6 @@ img {
 .top-block__title {
   padding: 0px;
   margin: 0 auto;
-  width: 81%;
   font-size: 27px;
   line-height: 30px;
   font-weight: bold;
@@ -560,7 +566,7 @@ img {
   background: url("../img/icon-toy.svg") no-repeat 50% 50%;
 }
 @media (min-width: 768px) {
-  .top-block__wrapper-bg {
+  .top-block--wrapper-bg {
     background: #f9f9f9 url("../img/hero-tablet@1x.jpg") no-repeat 50% 20%;
   }
   .top-block__title {
@@ -586,11 +592,6 @@ img {
     display: flex;
     position: absolute;
     bottom: 0px;
-    -ms-flex-pack: center;
-        justify-content: center;
-    left: 30px;
-    right: 30px;
-    box-sizing: border-box;
   }
   .top-block__item {
     width: 334px;
@@ -620,7 +621,7 @@ img {
   }
 }
 @media (min-width: 1244px) {
-  .top-block__wrapper-bg {
+  .top-block--wrapper-bg {
     background: #f9f9f9 url("../img/hero-desktop@1x.jpg") no-repeat 50% 20%;
   }
   .top-block__wrapper {
@@ -637,7 +638,7 @@ img {
   }
 }
 @media (min-width: 1244px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1244px) and (min-resolution: 144dpi), (min-width: 1244px) and (min-resolution: 1.5dppx) {
-  .top-block__wrapper-bg {
+  .top-block--wrapper-bg {
     background-image: url("../img/hero-desktop@2x.jpg");
     background-size: 1150px auto;
   }
@@ -1381,7 +1382,7 @@ img {
     width: auto;
     margin: 0 auto;
     bottom: 100px;
-    left: 350px;
+    left: 175px;
   }
   .contacts__list {
     -ms-flex-direction: column;
@@ -1506,20 +1507,6 @@ img {
     left: 100px;
   }
 }
-.product-list {
-  width: 260px;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .product-list {
-    width: 668px;
-  }
-}
-@media (min-width: 1244px) {
-  .product-list {
-    width: 1050px;
-  }
-}
 .product-list__item-title {
   padding: 0px;
   margin: 0px;
@@ -1625,21 +1612,9 @@ img {
   }
 }
 .video-block {
-  width: 260px;
-  margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
   border: 1px solid #ececec;
-}
-@media (min-width: 768px) {
-  .video-block {
-    width: 668px;
-  }
-}
-@media (min-width: 1244px) {
-  .video-block {
-    width: 1050px;
-  }
 }
 .video-block__title {
   position: relative;
@@ -1848,19 +1823,7 @@ img {
   padding-bottom: 28px;
 }
 .form-block__container {
-  width: 260px;
-  margin: 0 auto;
   padding-bottom: 28px;
-}
-@media (min-width: 768px) {
-  .form-block__container {
-    width: 668px;
-  }
-}
-@media (min-width: 1244px) {
-  .form-block__container {
-    width: 1050px;
-  }
 }
 .form-block__descr {
   font-size: 13px;
@@ -2061,7 +2024,8 @@ img {
   background: #63d1bb;
 }
 .form-item__value--checkbox:checked + label::before {
-  content: "\2713";
+  background-image: url("../img/icon-tick.svg");
+  background-position: 50%;
 }
 .form-item__value:disabled + label[for*="radio"]::before {
   box-shadow: 0 0 0 3px #ecf0f1;
