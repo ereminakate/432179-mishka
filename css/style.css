@@ -579,7 +579,7 @@ img {
   .top-block__wrapper {
     height: 750px;
     /* минимальная высота содержания */
-    width: 768px;
+    width: 668px;
     margin: 0 auto;
     -ms-flex-align: start;
         align-items: flex-start;
@@ -627,7 +627,7 @@ img {
   .top-block__wrapper {
     height: 746px;
     /* минимальная высота содержания */
-    width: 1250px;
+    width: 1050px;
     margin: 0 auto;
   }
   .top-block__item {
@@ -856,21 +856,7 @@ img {
 }
 .block-about {
   padding-top: 30px;
-}
-.block-about__wrapper {
-  width: 260px;
-  margin: 0 auto;
   color: #000000;
-}
-@media (min-width: 768px) {
-  .block-about__wrapper {
-    width: 668px;
-  }
-}
-@media (min-width: 1244px) {
-  .block-about__wrapper {
-    width: 1050px;
-  }
 }
 .block-about__title {
   font-size: 25px;
@@ -965,8 +951,7 @@ img {
     padding-bottom: 45px;
     clear: both;
   }
-  .block-about__wrapper {
-    width: 1250px;
+  .block-about--wrapper {
     padding: 0px 275px;
     box-sizing: border-box;
   }
