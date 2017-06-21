@@ -8,4 +8,34 @@
 	cursor: pointer;
 	font-weight: bold;
 	text-transform: uppercase;
+
+&:focus,
+  &:hover {
+    background-color: @palette-paragraph;
+    color: #fff;
+  }
+
+  &:active {
+    color: fade(#fff, 30%);
+  }
+  &:disabled,
+  .disabled {
+    color: @palette-border;
+    border: 2px solid @palette-border;
+  }
+
+  &--palette-primary {
+    color: #fff;
+    border: 2px solid @palette-primary;
+    background-color: @palette-primary;
+    &:focus,
+    &:hover {
+      color: fade(#fff, 60%);
+      background-color: @palette-primary;
+    }
+    &:active {
+      color: fade(#fff, 30%);
+      background-color: @palette-primary;
+    }
+  }
 }
