@@ -28,6 +28,8 @@
 	margin: 0px;
     padding: 0px;
     list-style: none;
+    display: flex;
+	align-items: flex-end;
 }
 
 .top-block__item {
@@ -39,6 +41,14 @@
 	}
 	&--bg2 {
 		background: @color-darkblue;
+	}
+	
+	&:hover {
+			height: 108px;
+		}
+
+	&:active .top-block__item-interior, &:active .top-block__item-toys {
+		opacity: 0.6;
 	}
 
 }
@@ -68,7 +78,6 @@
 			background: url("../img/icons/icon-interior.svg") no-repeat 50% 50%;
 			opacity: 0.2;
 		}
-
 }
 
 .top-block__item-interior span, .top-block__item-toys span{
@@ -117,6 +126,7 @@
   
   .top-block__list {
 	display: flex;
+	align-items: flex-end;
 	position: absolute;
 	bottom: 0px;
 	}
@@ -124,6 +134,9 @@
 	.top-block__item {
 		width: 334px;
 		height: 116px;
+		&:hover {
+			height: 121px;
+		}
 	}
 	
 	.top-block__item-interior, .top-block__item-toys {
@@ -154,6 +167,11 @@
   	
   	.top-block__item {
 		width: 525px;
+		height: 121px;
+		
+		&:hover {
+			height: 126px;
+		}
 	}
 	
 	.top-block__title {

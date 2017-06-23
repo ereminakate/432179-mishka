@@ -1,6 +1,14 @@
 .video-block {
 	margin: 33px 30px 60px;
 	border: 1px solid @color-border-gray;
+	
+	&:hover {
+		box-shadow: 0px 6px 11px 1px #ececec;
+	}
+	
+	&:active {
+		box-shadow: 0px 3px 7px 1px #ececec;
+	}
 }
 
 .video-block__title {
@@ -61,9 +69,18 @@
 }
 
 .video-block__play {
+	outline: 0;
 	border: none;
 	background: none;
 	cursor: pointer;
+	
+	&:hover img {
+		width: 120px;
+	}
+	
+	&:active img {
+		width: 80px;
+	}
 }
 
 @media @tablet-widths {

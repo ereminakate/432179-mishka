@@ -57,6 +57,17 @@
 	margin: 0px;
 	padding: 25px 30px 25px 75px;
 	box-sizing: border-box;
+	
+	&:hover {
+		opacity: 0.6;
+	}
+	&--cart:hover::before {
+		opacity: 1;
+	}
+	
+	&:active {
+		opacity: 0.3;
+	}
 }
 
 
@@ -180,7 +191,6 @@
 	}
 	
 	.main‐nav__item--search {
-		background: url("../img/icons/icon-search.svg") no-repeat 50% 50%;
 		order: -2;
 		position: relative;
 		width: 80px;
@@ -204,11 +214,32 @@
 			background: url("../img/icons/icon-cart.svg") no-repeat;
 			top: 30px;
 			left: 30px;
+
+		}
+		&:hover::before {
+			background: url("../img/icons/icon-cart-green.svg") no-repeat;
+			opacity: 1;
 		}
 	}
 
 	.main‐nav__link--search {
 		font-size: 0px;
+		
+		&::before {
+			position: absolute;
+			display: block;
+			content: "";
+			width: 20px;
+			height: 20px;
+			top: 35px;
+			left: 30px;
+			background: url("../img/icons/icon-search.svg") no-repeat 50% 50%;
+		}
+		
+		&:hover::before {
+			background: url("../img/icons/icon-search-green.svg") no-repeat;
+			opacity: 1;
+		}
 	}
 	
 	.main‐nav__item--catalog, .main‐nav__item--knitting {
@@ -328,7 +359,7 @@
 	.main‐nav__link--cart {
 		padding-left: 85px;
 		&:before {
-			top: 36px;
+			top: 33px;
 		}
 	}
 	.main‐nav__item--promo-text {

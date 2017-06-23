@@ -100,6 +100,14 @@
 		height: 20px;
 		border: 8px solid white;
 	}
+	
+	&:hover::before {
+		box-shadow: 0 0 0 2px @color-blue;
+	}
+	
+	&:active::before {
+		box-shadow: 0 0 0 2px #c7c7c7;
+	}
 }
 
 .form-item__value--radio:checked + label::before {
@@ -131,6 +139,7 @@
 }
 
 .form-item__value-text {
+	outline: 0;
 	&--fio, &--tel, &--email {
 		width: 100%;
 		.text-size(17px; 18px);
@@ -138,6 +147,14 @@
 		padding-bottom: 16px;
 		border: none;
 		border-bottom: 2px solid @color-black;
+		
+		&:hover {
+			border: none;
+			border-bottom: 2px solid @color-blue;
+		}
+		&:active {
+			border-bottom: 1px solid @color-blue;
+		}
 	}
 	&--tel, &--email{
 		padding-bottom: 20px;
@@ -150,6 +167,9 @@ textarea[class*="form-item__value-text--dop"] {
 	padding: 15px;
 	margin-bottom: 0px;
 	border: 2px solid @color-black;	
+	&:hover, &:active {
+		border: 2px solid @color-blue;
+	}
 }
 
 @media @tablet-widths {
