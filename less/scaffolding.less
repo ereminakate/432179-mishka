@@ -1,15 +1,19 @@
 @font-face {
     font-family: "OpenSans";
     src: url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
+    font-weight: 400;
+	font-style: normal; 
 }
 
 @font-face {
-    font-family: "OpenSansBold";
+    font-family: "OpenSans";
     src: url("../fonts/opensansbold.woff") format("woff"), url("../fonts/opensansbold.woff2") format("woff2");
+    font-weight: 700;
+	font-style: normal;
 } 
 
 body {
-	font-family: "OpenSans", "Tahoma", sans-serif;
+	font-family: "OpenSans", "Tahoma", "Arial", sans-serif;
 	color: @color-black;
 	margin: 0px;
 	min-width: 320px;
@@ -27,15 +31,15 @@ p {
 }
 
 .visually-hidden{
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-
-  border: 0;
-
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	
+	border: 0;
+	
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 } 
