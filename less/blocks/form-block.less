@@ -4,7 +4,8 @@
 }
 
 .form-block__container {
-	padding-bottom: 28px;
+	padding: 0 30px;
+	padding-bottom: 20px;
 }
 
 .form-block__descr {
@@ -13,10 +14,11 @@
 }
 
 .form-block__form {
-	padding-top: 30px;
+	
 }
 
 .form-block__item {
+	padding: 0px 30px;
 	position: relative;
 	
 	&:before {
@@ -31,26 +33,44 @@
 	&--tel .form-block__name-item, &--email .form-block__name-item {
 		padding-bottom: 0px;
 	}
+	&--tel {
+		padding-top: 3px;
+		padding-bottom: 0px;
+	}
 }
 
 .form-block__name-item {
+	position: relative;
 	color: @color-blue;
 	display: block;
 	text-transform: uppercase;
 	font-weight: bold;
-	padding-bottom: 20px;
+	padding-bottom: 21px;
+	
+	&:after {
+		position: absolute;
+	    content: "";
+	    width: 199px;
+	    height: 10px;
+	    top: 2px;
+	    left: 62px;
+	    border-bottom: 2px solid @color-blue;
+	}
 }
 
 .form-block__note {
 	.text-size(14px; 16px);
 	color: @color-gray-black;
 	display: block;
+	padding: 0 30px;
 	padding-bottom: 35px;
 }
 
 .form-block__order {
 	padding-top: 15px;
 	padding-bottom: 15px;
+	margin: 0 30px;
+	width: 260px;
 }
 
 
@@ -66,6 +86,7 @@
 	
 	.form-block__container {
 		position: relative;
+		padding: 0px;
 		padding-bottom: 0px;
 	}
 
@@ -77,6 +98,7 @@
 	.form-block__item {
 		display: flex;
 		flex-wrap: wrap;
+		padding: 0px;
 		padding-bottom: 30px;
 		padding-top: 50px;
 		
@@ -85,7 +107,7 @@
 		}
 		&--fio {
 			align-items: baseline;
-			padding-top: 40px;
+			padding-top: 44px;
 			padding-bottom: 50px;
 		}
 		&--email {
@@ -99,24 +121,32 @@
 	}
 	
 	.form-block__name-item {
-		width: 165px;
-		padding-top: 10px;
+		width: 162px;
+		padding-top: 18px;
+		padding-left: 3px;
+		&:after {
+			display: none;
+		}
 	}
 	
 	.form-block__order {
 		width: 230px;
 		padding-top: 10px;
+		margin: 0px;
 	}
 	
 	.form-block__note {
 		position: absolute;
+		padding: 0px;
+		padding-bottom: 35px;
 		bottom: 0px;
 		right: 0px;
-		width: 250px;
+		width: 302px;
 		height: 20px;
 		display: block;
 		padding-top: 20px;
 		box-sizing: border-box;
+		.text-size(17px; 30px);
 	}	
 	
 	.form-block__form {
@@ -126,7 +156,7 @@
 
 @media @desktop-widths {
 	.form-block {
-		padding-top: 130px;
+		padding-top: 124px;
 	}
 	
 	.form-block__form {
@@ -143,7 +173,7 @@
 	
 	.form-block__name-item {
 		width: 175px;
-		padding-left: 60px;
+		padding-left: 64px;
 		box-sizing: border-box;
 
 	}
