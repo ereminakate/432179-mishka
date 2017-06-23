@@ -29,7 +29,7 @@
     padding: 0px;
     list-style: none;
     display: flex;
-	align-items: flex-end;
+	flex-direction: column;
 }
 
 .top-block__item {
@@ -43,41 +43,36 @@
 		background: @color-darkblue;
 	}
 	
-	&:hover {
-			height: 108px;
-		}
-
 	&:active .top-block__item-interior, &:active .top-block__item-toys {
 		opacity: 0.6;
 	}
-
 }
 
 .top-block__item-interior, .top-block__item-toys {
+	display: block;
+	position: relative;
+	text-align: left;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 22px 30px;
+	text-decoration: none;
+	.text-size(19px; 24px);	
+	color: @color-white;
+		
+	&::after {
 		display: block;
-		position: relative;
-		text-align: left;
+		position: absolute;
+		right: 30px;
+		top: 20px;
+		content: "";
+		text-align: center;
 		box-sizing: border-box;
 		margin: 0px;
-		padding: 22px 30px;
-		text-decoration: none;
-		.text-size(19px; 24px);	
-		color: @color-white;
-		
-		&::after {
-			display: block;
-			position: absolute;
-			right: 30px;
-			top: 20px;
-			content: "";
-			text-align: center;
-			box-sizing: border-box;
-			margin: 0px;
-			width: 50px;
-			height: 63px;
-			background: url("../img/icons/icon-interior.svg") no-repeat 50% 50%;
-			opacity: 0.2;
-		}
+		width: 50px;
+		height: 63px;
+		background: url("../img/icons/icon-interior.svg") no-repeat 50% 50%;
+		opacity: 0.2;
+	}
 }
 
 .top-block__item-interior span, .top-block__item-toys span{
@@ -86,7 +81,7 @@
 }
 	
 .top-block__item-toys:after {
-		background: url("../img/icons/icon-toy.svg") no-repeat 50% 50%;
+	background: url("../img/icons/icon-toy.svg") no-repeat 50% 50%;
 }
 
 @media @tablet-widths {
@@ -97,21 +92,20 @@
 		}
 	}
 
-@media
-  (min-resolution: 144dpi),
-  (min-resolution: 1.5dppx) {
-   .top-block__wrapper-bg {
-    background-image: url("../img/hero-desktop@1x.jpg");
-    background-size: 668px auto;
-  }
-}
+	@media
+	  (min-resolution: 144dpi),
+	  (min-resolution: 1.5dppx) {
+	   .top-block__wrapper-bg {
+	    background-image: url("../img/hero-desktop@1x.jpg");
+	    background-size: 668px auto;
+	  }
+	}
 	
 	.top-block__title {
 		.text-size-title();
 		width: 510px;
 		padding-top: 155px;
 	}
-
 
   .top-block__wrapper {
 	    height: 743px; /* минимальная высота содержания */
@@ -127,6 +121,7 @@
   .top-block__list {
 	display: flex;
 	align-items: flex-end;
+	flex-direction: row;
 	position: absolute;
 	bottom: 0px;
 	}

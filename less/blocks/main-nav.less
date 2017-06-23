@@ -4,8 +4,8 @@
 	margin: 0 auto;	
 }
 
-
 .main-nav--closed .main-nav__toggle {
+	outline: 0;
   	content: "";
 	position: absolute;
 	top: -47px;
@@ -18,8 +18,8 @@
 	cursor: pointer;
 }
 
-
 .main-nav--opened .main-nav__toggle {
+	outline: 0;
 	content: "";
 	position: absolute;
 	top: -50px;
@@ -36,7 +36,7 @@
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
-	}
+}
 
 .main‐nav__item {
 	height: 80px;
@@ -61,33 +61,34 @@
 	&:hover {
 		opacity: 0.6;
 	}
+	
 	&--cart:hover::before {
-		opacity: 1;
-	}
+			background: url("../img/icons/icon-cart-green.svg") no-repeat;
+			opacity: 1;
+		}
+		
+	&--search:hover::before {
+			background: url("../img/icons/icon-search-green.svg") no-repeat;
+			opacity: 1;
+		}
 	
 	&:active {
 		opacity: 0.3;
 	}
 }
 
-
-
 .main‐nav__item--new, .main‐nav__item--sale, .main‐nav__item--promo-text {
 	display: none;
 }
 
-
 @media @mobile-widths-only {
-	
 	
 	.main-nav--closed .main‐nav__list1, .main-nav--closed .main‐nav__list2 {
 	    display: none;
-	
 	  }
 	  
 	  .main-nav--nojs .main‐nav__list1, .main-nav--nojs .main‐nav__list2 {
 	    display: block;
-	
 	  }
   
 	.main-nav--nojs .main-nav__toggle {
@@ -96,7 +97,6 @@
 
 	  .main-nav--nojs .main-nav__wrapper {
 	    position: static;
-	
 	    height: auto;
 	  }
 	
@@ -120,6 +120,7 @@
 		
 	.main‐nav__link{
 		position: relative;
+		
 		&--search:before, &--cart:before, {
 			position: absolute;
 			width: 22px;
@@ -133,9 +134,7 @@
 		&--cart:before {
 			background: url("../img/icons/icon-cart.svg") no-repeat 50% 50%;
 		}
-	}
-		
-		
+	}	
 }
 	
 @media @tablet-widths {
@@ -174,7 +173,6 @@
 		justify-content: flex-end;
 	}
 
-	
 	.main‐nav__item {
 		height: 88px;
 		padding: 0px;
@@ -214,11 +212,6 @@
 			background: url("../img/icons/icon-cart.svg") no-repeat;
 			top: 30px;
 			left: 30px;
-
-		}
-		&:hover::before {
-			background: url("../img/icons/icon-cart-green.svg") no-repeat;
-			opacity: 1;
 		}
 	}
 
@@ -248,7 +241,6 @@
 		z-index: 2;
 		width: 50%;
 	}
-	
 	
 	.main‐nav__link--catalog {
 		padding: 18px 0px;
@@ -367,5 +359,4 @@
 		text-align: right;
 		padding-top: 0px;
 	}
-
 }
