@@ -1,48 +1,22 @@
 .social‐link {
 	display: inline-block;
+	vertical-align: middle;
 	position: relative;
 	width: 22px;
 	height: 25px;
 	text-align: center;
 	padding-right: 30px;
 	
-	&‐‐in::before {
-		position: absolute;
-		background: url("../img/icons/icon-insta.svg") no-repeat 0% 0%;
-		content: "";
-		left: 0px;
-		top: 0px;
-		width: 25px;
-		height: 25px;
-		z-index: 1;
+	&:hover svg {
+		fill: #46c1ae;
+		opacity: 1;
 	}
 
-	&‐‐fb::before {
-		position: absolute;
-		background: url("../img/icons/icon-fb.svg") no-repeat 0% 0%;
-		content: "";
-		left: 0px;
-		top: 0px;
-		width: 15px;
-		height: 25px;
-		z-index: 1;	
+	&:active svg {
+		fill: #46c1ae;
+		opacity: 0.3;
 	}
-	
-	&‐‐tw {
-		padding-right: 0px;
 		
-		&::before {
-			position: absolute;
-			background: url("../img/icons/icon-twitter.svg") no-repeat 0% 0%;
-			content: "";
-			left: 0px;
-			top: 0px;
-			width: 25px;
-			height: 25px;
-			z-index: 1;
-		}
-	}
-	
 	&:visited {
 		color: blue;
 		text-decoration: none;

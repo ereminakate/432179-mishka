@@ -46,6 +46,7 @@
 .product-item-spec__name {
 	padding: 10px 0px 6px;
 	display: inline-block;
+	vertical-align: middle;
 	width: 98px;
 	float: left;
 	border-bottom: 1px solid #ececec;
@@ -54,6 +55,7 @@
 .product-item-spec__value {
 	padding: 10px 0px 6px;
 	display: inline-block;
+	vertical-align: middle;
 	width: 162px;
 	float: left;
 	border-bottom: 1px solid #ececec;
@@ -149,7 +151,7 @@
 @media @desktop-widths {
 	
 	.product-item {
-		padding-bottom: 240px;
+		padding-bottom: 0px;
 		padding-top: 125px;
 		margin: 0px;
 	}
@@ -189,6 +191,7 @@
 	.product-item__block-descr {
 		width: 294px;
 		padding-left: 175px;
+		padding-bottom: 105px;
 	}
 	
 	.product-item__descr {
@@ -197,11 +200,10 @@
 	
 	.product-item__block-order {
 		order: 1;
-		position: absolute;
-		left: 175px;
+		padding-left: 175px;
 		width: 292px;
-		height: 200px;
-		top: 365px;
+		height: 183px;
+		clear: left;
 	}
 	
 	.product-item-spec__name, .product-item-spec__value {
