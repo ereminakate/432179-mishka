@@ -18,9 +18,8 @@
 
 .product-list__item-descr {
 	display: block;
-	padding-top: 20px;
 	.text-size(13px; 30px);
-	padding-bottom: 30px;
+	padding-bottom: 18px;
 }
 
 .product-list__item-descr-block {
@@ -34,11 +33,6 @@
 	}	
 }
 
-.product-list__item-descr-block > span {
-	display: block;
-	padding-bottom: 18px;
-	.text-size(13px; 30px);
-}
 
 .product-list__item-price {
 	border-top: 1px solid @color-border-gray;
@@ -107,6 +101,12 @@
 	.product-list__item:first-child {
 		margin-top: 0px;
 	}
+	
+	.product-list__item-descr {
+		.text-size(15px; 30px);
+		padding-bottom: 30px;
+	}
+
 	.product-list__item-descr-block {
 		flex-grow: 1;
 		padding: 0px 25px;
@@ -117,6 +117,8 @@
 	.product-list__item-title {
 		.text-size(20px; 24px);
 		padding-top: 25px;
+		padding-bottom: 4px;
+		max-width: 280px;
 	}
 	
 	.product-list__item-price {
@@ -146,10 +148,10 @@
 	}
 	
 	.product-list__item-title {
-		padding-top: 17px;
 		padding-top: 19px;
 		padding-left: 3px;
-		width: 235px;
+		padding-bottom: 4px;
+		max-width: 235px;
 	}
 	
 	.product-list__item-descr-block {

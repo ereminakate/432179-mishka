@@ -47,7 +47,8 @@
 		border-top: 1px solid @color-border-gray;
 	}
 }
-
+	
+ 
 .main‐nav__link {
 	color: @color-black;
 	text-decoration: none;
@@ -58,19 +59,43 @@
 	padding: 25px 30px 25px 75px;
 	box-sizing: border-box;
 	
-	&:hover {
+	position: relative;
+		
+	&--search:before, &--cart:before, {
+		position: absolute;
+		width: 22px;
+		height: 22px;
+		content: "";
+		background: url("../img/icons/icon-search.svg") no-repeat 50% 50%;
+		top: 27px;
+		left: 29px;
+	}
+
+	&--cart:before {
+		background: url("../img/icons/icon-cart.svg") no-repeat 50% 50%;
+	} 
+		
+	&:hover span {
 		opacity: 0.6;
+	}
+	
+	&--search:hover::before {
+		background: url("../img/icons/icon-search-green.svg") no-repeat;
+		top: 29px;
+		left: 31px;
+		width: 22px;
+		height: 22px;
+		opacity: 1;
 	}
 	
 	&--cart:hover::before {
 			background: url("../img/icons/icon-cart-green.svg") no-repeat;
+			top: 29px;
+			left: 30px;
+			width: 22px;
+			height: 22px;
 			opacity: 1;
-		}
-		
-	&--search:hover::before {
-			background: url("../img/icons/icon-search-green.svg") no-repeat;
-			opacity: 1;
-		}
+		}	
 	
 	&:active {
 		opacity: 0.3;
@@ -119,21 +144,7 @@
 		}
 		
 	.main‐nav__link{
-		position: relative;
 		
-		&--search:before, &--cart:before, {
-			position: absolute;
-			width: 22px;
-			height: 22px;
-			content: "";
-			background: url("../img/icons/icon-search.svg") no-repeat 50% 50%;
-			top: 28px;
-			left: 30px;
-		}
-	
-		&--cart:before {
-			background: url("../img/icons/icon-cart.svg") no-repeat 50% 50%;
-		}
 	}	
 }
 	
@@ -150,6 +161,7 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	margin-top: -35px;
 	}
 	
 	.main-nav__toggle {
@@ -164,7 +176,7 @@
 	.main‐nav__list1 {
 		order: -1;
 		justify-content: flex-start;
-		margin-top: auto;
+		margin-top: 90px;
 		width: 48%;
 	}
 	
@@ -184,7 +196,7 @@
 	}
 		
 	.main‐nav__link {
-		padding: 30px 25px;
+		 padding: 30px 25px;
 		.size-bold();
 	}
 	
@@ -202,35 +214,19 @@
 	.main‐nav__link--cart {
 		padding-left: 82px;
 		padding-right: 0px;
-		position: relative;
-		&:before {
-			position: absolute;
-			display: block;
-			content: "";
-			width: 20px;
-			height: 20px;
-			background: url("../img/icons/icon-cart.svg") no-repeat;
-			top: 30px;
-			left: 30px;
-		}
 	}
 
+
+	.main‐nav__icon-search {
+		padding: 0px;
+	}
+	
 	.main‐nav__link--search {
 		font-size: 0px;
 		
-		&::before {
-			position: absolute;
-			display: block;
-			content: "";
-			width: 20px;
-			height: 20px;
-			top: 35px;
-			left: 30px;
-			background: url("../img/icons/icon-search.svg") no-repeat 50% 50%;
-		}
 		
-		&:hover::before {
-			background: url("../img/icons/icon-search-green.svg") no-repeat;
+		& svg:hover {
+			fill: #63d1bb;
 			opacity: 1;
 		}
 	}
@@ -243,12 +239,12 @@
 	}
 	
 	.main‐nav__link--catalog {
-		padding: 18px 0px;
+		padding: 21px 0px;
 		.text-size(15px; 24px);
 	}
 	
 	.main‐nav__link--knitting {
-		padding: 18px 0px;
+		padding: 21px 0px;
 		.text-size(15px; 24px);
 		padding-left: 6px;
 	}
@@ -262,7 +258,7 @@
 	}
 	
 	.main‐nav__promo-text {
-		padding-top: 18px;
+		padding-top: 20px;
 		display: block;
 		.text-size(15px; 24px);
 		text-align: right;
@@ -271,6 +267,10 @@
 
 
 @media @desktop-widths {
+	
+	.main-nav {
+		margin-top: -90px;
+	}
 	
 	.main‐nav__item {
 		height: 88px;
@@ -326,8 +326,12 @@
 		width: 210px;
 	}
 	
+	.main‐nav__link {
+		 padding: 30px 0px;
+	}
+	
 	.main‐nav__link--catalog, .main‐nav__link--knitting {
-		padding: 32px 0px;
+		padding: 31px 0px;
 		.text-size(17px; 24px);
 	}
 	
@@ -339,24 +343,35 @@
 		.text-size(15px; 24px);
 		padding-left: 0px;
 		padding-right: 0px;
-		padding-top: 20px;
+		padding-top: 17px;
 	}
 	
 	.main‐nav__link--sale {
 		.text-size(15px; 24px);
 		padding-left: 34px;
-		padding-top: 20px;
+		padding-top: 17px;
 	}
 	
 	.main‐nav__link--cart {
 		padding-left: 85px;
-		&:before {
-			top: 33px;
+		&::before {
+			top: 27px;
 		}
 	}
+	
+	.main‐nav__link--search {
+		&::before {
+			top: 27px;
+		}
+	}
+	
 	.main‐nav__item--promo-text {
 		border: none;
 		text-align: right;
 		padding-top: 0px;
+	}
+	
+	.main‐nav__promo-text {
+		padding-top: 17px;
 	}
 }
