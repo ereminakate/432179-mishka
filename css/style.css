@@ -210,7 +210,7 @@ p {
   margin: 0 auto;
   font-size: 27px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   padding-top: 70px;
   width: 250px;
 }
@@ -394,7 +394,6 @@ p {
 .reviews {
   width: 320px;
   margin: 0 auto;
-  padding: 0px 30px;
   padding-bottom: 45px;
 }
 .reviews__wrapper {
@@ -1446,6 +1445,7 @@ textarea[class*="form-item__value-text--dop"]:active {
     line-height: 22px;
     padding-top: 15px;
     padding-bottom: 25px;
+    max-width: 300px;
   }
   .block-about__title {
     padding-bottom: 20px;
